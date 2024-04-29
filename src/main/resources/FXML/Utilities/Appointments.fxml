@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.utilities.appointmentsController">
+    <TableView layoutX="110.0" layoutY="52.8" prefHeight="347.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0">
+      <columns>
+          <TableColumn fx:id="profileCol" prefWidth="100.0" text="#" />
+          <TableColumn fx:id="idCol" prefWidth="100.0" text="Reference ID" />
+          <TableColumn fx:id="doctorCol" prefWidth="100.0" text="Dooctor" />
+          <TableColumn fx:id="patientCol" prefWidth="100.0" text="Patient" />
+          <TableColumn fx:id="dateCol" prefWidth="100.0" text="Date" />
+          <TableColumn fx:id="operationCol" prefWidth="100.0" text="Operation" />
+          <TableColumn fx:id="editCol" prefWidth="100.0" text="Edit" />
+      </columns>
+    </TableView>
+   <Label layoutX="6.0" layoutY="23.0" text="Booked Appointments" />
+</AnchorPane>

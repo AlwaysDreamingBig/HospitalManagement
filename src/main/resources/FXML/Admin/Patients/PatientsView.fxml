@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="56.0" prefHeight="644.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.0">
+        <AnchorPane prefHeight="700.0" prefWidth="1060.0">
+            <TextField fx:id="search_bar" layoutX="15.0" layoutY="35.0" prefHeight="20.0" prefWidth="610.0" />
+            <Button layoutX="739.0" layoutY="646.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" text="Prev" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="405.0" />
+            <Button layoutX="404.0" layoutY="646.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="50.0" text="Next" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="404.0" />
+            <HBox layoutX="980.0" layoutY="22.0" prefHeight="50.0" prefWidth="200.0" spacing="20.0" AnchorPane.rightAnchor="14.0">
+                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="download" />
+                <Button fx:id="UploadPicture" mnemonicParsing="false" prefHeight="33.0" prefWidth="37.0" text="Add" />
+                <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="18.0" text="Select all" />
+                <Button mnemonicParsing="false" prefHeight="12.0" prefWidth="18.0" text="Refresh" />
+                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="download" />
+                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="download" />
+            </HBox>
+         <TableView fx:id="patients_tableView" layoutX="25.2" layoutY="10.0" prefHeight="369.0" prefWidth="983.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="75.0">
+            <columns>
+               <TableColumn fx:id="PatientPicture" prefWidth="75.0" />
+               <TableColumn fx:id="PatientID" prefWidth="75.0" text="#" />
+               <TableColumn fx:id="PatientName" prefWidth="100.0" text="Name" />
+               <TableColumn fx:id="PatientGender" prefWidth="100.0" text="Gender" />
+               <TableColumn fx:id="PatientBirthDate" prefWidth="100.0" text="Birth Date" />
+               <TableColumn fx:id="PatientEmail" prefWidth="150.0" text="Email" />
+               <TableColumn fx:id="PatientMobile" prefWidth="100.0" text="Mobile" />
+               <TableColumn fx:id="PatientBloodGrp" prefWidth="100.0" text="Blood Goup" />
+               <TableColumn fx:id="PatientAssignedDr" prefWidth="100.0" text="Assigned Dr" />
+               <TableColumn fx:id="PatientTreatment" prefWidth="100.0" text="Treatment" />
+               <TableColumn fx:id="Action" prefWidth="75.0" text="Action" />
+            </columns>
+            <columnResizePolicy>
+               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+         </TableView>
+        </AnchorPane>
+    </ScrollPane>
+    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="44.0" prefWidth="270.0">
+        <Label layoutX="16.0" layoutY="8.0" text="Patients Board">
+           <font>
+               <Font name="System Bold" size="18.0"/>
+           </font>
+        </Label>
+    </AnchorPane>
+</AnchorPane>

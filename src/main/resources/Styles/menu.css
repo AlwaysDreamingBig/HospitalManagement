@@ -1,0 +1,59 @@
+/* Styling for root */
+.root {
+    -fx-background-color: #FFFFFF; /* White */
+}
+
+.profile_container {
+    -fx-background-color: #FFFFFF; /* White */
+    -fx-border-color: #9933ec; /* Dark blue border */
+    -fx-border-width: 2px; /* Border width */
+}
+
+.logout_btn{
+    -fx-background-color: #9933ec; /* White */
+    -fx-text-fill: #ece6e6; /* Dark blue text */
+}
+
+/* Hover effect */
+.logout_btn:hover {
+    -fx-background-color: #9933ec; /* Blue on hover */
+    -fx-text-fill: #FFFFFF; /* White text on hover */
+}
+
+/* Pressed effect */
+.logout_btn:pressed {
+    -fx-background-color: #070707; /* Darker blue when pressed */
+}
+
+.ImageView {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0); /* Drop shadow effect */
+}
+
+/* Styling for buttons */
+Button {
+    -fx-background-color: #FFFFFF; /* White */
+    -fx-text-fill: #767272; /* Dark blue text */
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 10px 20px; /* Padding */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-cursor: hand; /* Cursor style */
+    -fx-border-width: 2px; /* Border width */
+}
+
+/* Hover effect */
+Button:hover {
+    -fx-background-color: #9933ec; /* Blue on hover */
+    -fx-text-fill: #FFFFFF; /* White text on hover */
+}
+
+/* Pressed effect */
+Button:pressed {
+    -fx-background-color: #6008a8; /* Darker blue when pressed */
+}
+
+/* Styling for labels */
+Label {
+    -fx-font-size: 10px; /* Font size */
+    -fx-text-fill: #828080; /* Text color */
+}

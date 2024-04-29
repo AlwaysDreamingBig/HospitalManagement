@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minHeight="700.0" minWidth="270.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.mainwindow.MainWindowMenuController">
+   <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="684.0" prefWidth="238.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="1100.0" prefWidth="237.0" styleClass="root">
+         <AnchorPane layoutX="34.0" layoutY="14.0" prefHeight="175.0" prefWidth="186.0">
+            <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="61.0" layoutY="35.0" pickOnBounds="true" styleClass="ImageView" />
+            <VBox alignment="CENTER" layoutX="35.0" layoutY="101.0" prefHeight="43.0" prefWidth="116.0">
+               <Label text="Agnès YAKAM" />
+               <Label text="Admin" />
+            </VBox>
+         </AnchorPane>
+         <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="213.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="250.0">
+            <Button fx:id="homeboard_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="53.0" prefWidth="230.0" text="Homeboard" />
+            <Button fx:id="EXtend_dashboard_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="53.0" prefWidth="230.0" text="Dashboard" />
+            <Button fx:id="appointment_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="54.0" prefWidth="230.0" text="Appointments" />
+            <Button fx:id="doctors_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="54.0" prefWidth="230.0" text="Doctors" />
+            <Button fx:id="staffManagement_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="54.0" prefWidth="230.0" text="Staff Management" />
+            <Button fx:id="patients_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="54.0" prefWidth="230.0" text="Patients" />
+            <Button fx:id="room_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="54.0" prefWidth="230.0" text="Rooms" />
+            <Button fx:id="department_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="54.0" prefWidth="230.0" text="Departments" />
+            <Button fx:id="finance_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="54.0" prefWidth="230.0" text="Finance Management" />
+            <Button fx:id="pharmacy_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="54.0" prefWidth="230.0" text="Pharmacy" />
+            <Button fx:id="records_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="54.0" prefWidth="230.0" text="Records" />
+            <Button fx:id="ambulance_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="53.0" prefWidth="230.0" text="Ambulance" />
+            <Button fx:id="inventory_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="53.0" prefWidth="230.0" text="Inventory" />
+         </VBox>
+         <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="150.0" styleClass="logout_btn" text="Logout" AnchorPane.leftAnchor="52.79999999999998" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="1000.0" />
+      </AnchorPane>
+   </ScrollPane>
+</AnchorPane>

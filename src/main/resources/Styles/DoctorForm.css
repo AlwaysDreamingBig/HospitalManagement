@@ -1,0 +1,59 @@
+/* General Container */
+.root {
+    -fx-background-color: #1a1a1a;
+}
+
+.main_container {
+    -fx-background-color: #333333;
+}
+
+.text {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 1.1em;
+}
+
+.button {
+    -fx-background-color: #00cc00;
+}
+
+.button:hover {
+    -fx-cursor: hand;
+}
+
+.button .text {
+    -fx-fill: #EEEEEE;
+    -fx-font-size: 1.2em;
+}
+
+.choice-box {
+    -fx-background-color: #565555;
+    -fx-border-color: #333333;
+}
+
+.choice-box .arrow-button {
+    -fx-background-color: #333333;
+}
+
+.choice-box .arrow {
+    -fx-background-color: #333333;
+}
+
+.choice-box-popup {
+    -fx-background-color: #333333;
+}
+
+.choice-box-popup .menu-item {
+    -fx-background-color: #444444;
+}
+
+.choice-box-popup .menu-item:hover {
+    -fx-background-color: #555555;
+}
+
+.text-area {
+    -fx-background-color: #333333;
+    -fx-text-fill:  #f00f0f;
+    -fx-highlight-fill: #555555;
+    -fx-highlight-text-fill: #FFFFFF;
+}
+

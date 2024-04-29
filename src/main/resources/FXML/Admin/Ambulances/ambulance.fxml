@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.ambulances.ambulancesController">
+    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane prefHeight="700.0" prefWidth="1060.0">
+            <Label layoutX="15.0" layoutY="2.0" text="Ambulances --&gt; Ambulances List" AnchorPane.leftAnchor="15.0" />
+         <TableView fx:id="ambulance_tableView" layoutX="10.0" layoutY="10.0" prefHeight="320.0" prefWidth="1007.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="75.0">
+            <columns>
+               <TableColumn fx:id="AmbulanceID" prefWidth="75.0" text="#" />
+               <TableColumn fx:id="AmbulanceNumber" prefWidth="100.0" text="Vehicle Nbr" />
+               <TableColumn fx:id="AmbulanceManufacturer" prefWidth="100.0" text="Manufacturer" />
+               <TableColumn fx:id="AmbulanceDesignation" prefWidth="96.0" text="Vehicle Designation" />
+               <TableColumn fx:id="AmbulanceWarranty" minWidth="0.0" prefWidth="130.0" text="Warranty Nbr" />
+               <TableColumn fx:id="AmbulanceSeller" prefWidth="100.0" text="Seller" />
+               <TableColumn fx:id="AmbulanceMadeYear" prefWidth="100.0" text="Year Made" />
+               <TableColumn fx:id="AmbulanceDriver" prefWidth="100.0" text="Driver Name" />
+               <TableColumn fx:id="AmbulanceContract" prefWidth="75.0" text="Contract Type" />
+               <TableColumn fx:id="Action" prefWidth="100.0" text="Action" />
+            </columns>
+            <columnResizePolicy>
+               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+         </TableView>
+            <TextField fx:id="search_bar" layoutX="15.0" layoutY="35.0" prefHeight="20.0" prefWidth="610.0" />
+            <Button layoutX="739.0" layoutY="646.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" text="Prev" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="405.0" />
+            <Button layoutX="404.0" layoutY="646.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="50.0" text="Next" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="404.0" />
+            <HBox layoutX="980.0" layoutY="22.0" prefHeight="50.0" prefWidth="200.0" spacing="20.0" AnchorPane.rightAnchor="14.0">
+                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="download" />
+                <Button fx:id="UploadPicture" mnemonicParsing="false" prefHeight="33.0" prefWidth="37.0" text="Add" />
+                <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="18.0" text="Select all" />
+                <Button mnemonicParsing="false" prefHeight="12.0" prefWidth="18.0" text="Refresh" />
+                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="download" />
+                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="download" />
+            </HBox>
+        </AnchorPane>
+    </ScrollPane>
+</AnchorPane>

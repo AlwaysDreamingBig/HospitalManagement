@@ -1,0 +1,130 @@
+/* Style for the ScrollPane */
+.scroll-pane {
+    -fx-background-color: #d57cf8; /* Set the background color to transparent */
+}
+
+/* Style for the AnchorPane inside the ScrollPane */
+.anchor-pane {
+    -fx-background-color: #ffffff; /* Set the background color */
+}
+
+/* Style for the HBox */
+.v-box {
+    -fx-background-color: #ffffff; /* Set background color */
+}
+
+/* Style for the ImageView */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0); /* Add drop shadow effect */
+}
+
+/* Style for the Label */
+.label_title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333; /* Set text color */
+}
+
+/* Style for the Label */
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333; /* Set text color */
+}
+
+/* Style for the TextField */
+.text-field {
+    -fx-font-size: 12px;
+    -fx-background-color: white; /* Set background color */
+    -fx-border-color: #CCCCCC; /* Set border color */
+    -fx-border-width: 1px; /* Set border width */
+    -fx-border-radius: 3px; /* Set border radius */
+    -fx-font-family: "Arial"; /* Set font family */
+}
+
+/* Style for the TextField when focused */
+.text-field:focused {
+    -fx-border-color: #007bff; /* Set border color when focused */
+    -fx-border-width: 2px; /* Set border width when focused */
+}
+
+
+/* Style for the DatePicker */
+.date-picker {
+    -fx-font-size: 12px;
+    -fx-background-color: #ffffff; /* Set background color */
+}
+
+/* Style for the ComboBox */
+.combo-box {
+    -fx-font-size: 12px;
+    -fx-background-color: white; /* Set background color */
+    -fx-border-color: #CCCCCC; /* Set border color */
+    -fx-border-width: 1px; /* Set border width */
+    -fx-border-radius: 3px; /* Set border radius */
+}
+
+/* Style for the ComboBox arrow button */
+.combo-box .arrow-button {
+    -fx-background-color: white; /* Set background color */
+}
+
+/* Style for the ComboBox when focused */
+.combo-box:focused {
+    -fx-border-color: #007bff; /* Set border color when focused */
+    -fx-border-width: 2px; /* Set border width when focused */
+}
+
+
+/* Style for the Button */
+.button {
+    -fx-font-size: 14px;
+    -fx-background-color: #007bff; /* Set background color */
+    -fx-text-fill: white; /* Set text color */
+}
+
+/* Style for the Button when hovered */
+.button:hover {
+    -fx-background-color: #0056b3; /* Set background color */
+}
+
+/* Style for the Button when pressed */
+.button:pressed {
+    -fx-background-color: #003366; /* Set background color */
+}
+
+/* Style for the Button */
+.button_save {
+    -fx-font-size: 14px;
+    -fx-background-color: #09a33cd0; /* Set background color */
+    -fx-text-fill: white; /* Set text color */
+    -fx-font-weight: bold;
+}
+
+/* Style for the Button when hovered */
+.button_save:hover {
+    -fx-background-color: #00b345; /* Set background color */
+}
+
+/* Style for the Button when pressed */
+.button_save:pressed {
+    -fx-background-color: #00660e; /* Set background color */
+}
+
+/* Style for the Button */
+.button_cancel {
+    -fx-font-size: 14px;
+    -fx-background-color: #ff2600; /* Set background color */
+    -fx-text-fill: white; /* Set text color */
+    -fx-font-weight: bold;
+}
+
+/* Style for the Button when hovered */
+.button_cancel:hover {
+    -fx-background-color: #b31b00; /* Set background color */
+}
+
+/* Style for the Button when pressed */
+.button_cancel:pressed {
+    -fx-background-color: #660c00; /* Set background color */
+}

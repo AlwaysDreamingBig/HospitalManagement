@@ -1,0 +1,28 @@
+/* Style for the vertical scroll bar */
+.scroll-bar:vertical {
+    -fx-background-color: transparent; /* Set the background color to transparent */
+    -fx-opacity: 0; /* Make the scroll bar invisible */
+}
+
+/* Style for the horizontal scroll bar */
+.scroll-bar:horizontal {
+    -fx-background-color: transparent; /* Set the background color to transparent */
+    -fx-opacity: 0; /* Make the scroll bar invisible */
+}
+
+/* Style for the thumb of the scroll bars */
+.scroll-bar .thumb {
+    -fx-background-color: #CCCCCC; /* Set the color of the thumb */
+    -fx-background-insets: 0; /* Remove any insets */
+}
+
+/* Style for the track of the scroll bars */
+.scroll-bar .track {
+    -fx-background-color: transparent; /* Set the background color to transparent */
+}
+
+/* Style for the decrement and increment buttons of the scroll bars */
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-background-color: transparent; /* Set the background color to transparent */
+    -fx-padding: 0; /* Remove padding */
+}
