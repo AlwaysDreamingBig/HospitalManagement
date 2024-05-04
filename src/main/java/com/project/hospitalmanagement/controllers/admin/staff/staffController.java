@@ -58,7 +58,7 @@ public class staffController implements Initializable{
         Connection connectDB = connection.connectDB();
 
         //SQL Query - Execute
-        String staffsViewQuery = "SELECT `StaffPicture`, `StaffID`, `StaffName`, `StaffFunction`, `StaffDepartment`, `StaffEmail`, `StaffMobile`, `StaffEntryDate`, `StaffEndDate`, `StaffSupervisor`, `StaffSalary` FROM `staffs`";
+        String staffsViewQuery = "SELECT `StaffPicture`, `StaffID`, `StaffName`, `StaffFunction`, `StaffDepartment`, `StaffEmail`, `StaffMobile`, `StaffEntryDate`, `StaffEndDate`, `StaffSupervisor`, `StaffSalary` FROM `staff`";
 
         try{
 
@@ -67,10 +67,25 @@ public class staffController implements Initializable{
 
             while(queryOutput.next()){
 
-                Blob queryStaffPicture = queryOutput.getBlob("StaffPicture");
-                // Convert Blob to Image and put inside imageView
-                InputStream inputStream = queryStaffPicture.getBinaryStream();
-                Image profilePicture = new Image(inputStream);
+                Image profilePicture;
+                Blob queryDoctorPicture = queryOutput.getBlob("StaffPicture");
+
+                if (queryDoctorPicture == null) {
+                    InputStream inputStream = getClass().getResourceAsStream("/Images/staffPicture.jpg");
+                    if (inputStream != null) {
+                        System.out.println("Image found");
+                    } else {
+                        System.out.println("Image not found");
+                    }
+                    //assert inputStream != null;
+                    assert inputStream != null;
+                    profilePicture = new Image(inputStream);
+                } else {
+                    // Convert Blob to Image and put inside imageView
+                    InputStream inputStream = queryDoctorPicture.getBinaryStream();
+                    profilePicture = new Image(inputStream);
+                }
+
                 ImageView imageView = new ImageView(profilePicture);
                 imageView.setFitWidth(30);
                 imageView.setFitHeight(30);

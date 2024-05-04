@@ -20,6 +20,7 @@ public class PageFactory {
         stage.show();
     }
 
+
     public void showAdminLoginWindow(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/AdminController.fxml"));
         createStage(loader);
@@ -45,10 +46,6 @@ public class PageFactory {
         createStage(loader);
     }
 
-    public void showAddAppointment(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Appointments/addAppointment.fxml"));
-        createStage(loader);
-    }
 
     public void closeStage(Stage stage){
         stage.close();

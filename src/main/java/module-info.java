@@ -27,6 +27,7 @@ module com.project.hospitalmanagement {
     exports com.project.hospitalmanagement.controllers.admin.doctors;
     exports com.project.hospitalmanagement.controllers.admin.patients;
     exports com.project.hospitalmanagement.controllers.admin.staff;
+    exports com.project.hospitalmanagement.controllers.admin.staff.Buttons;
     exports com.project.hospitalmanagement.controllers.admin.appointments;
     exports com.project.hospitalmanagement.controllers.admin.calls;
     exports com.project.hospitalmanagement.controllers.admin.ambulances;
@@ -35,6 +36,7 @@ module com.project.hospitalmanagement {
     exports com.project.hospitalmanagement.controllers.admin.department;
     exports com.project.hospitalmanagement.controllers.admin.records;
     exports com.project.hospitalmanagement.controllers.admin.inventory;
+    exports com.project.hospitalmanagement.controllers.general.certifications;
     exports com.project.hospitalmanagement.controllers.patient;
     exports com.project.hospitalmanagement.controllers.doctor;
     exports com.project.hospitalmanagement.controllers.alert;

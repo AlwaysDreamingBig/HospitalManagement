@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="289.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.general.certifications.certificationController">
+    <ImageView fx:id="certifImage" fitHeight="150.0" fitWidth="273.0" layoutX="60.0" layoutY="14.0" pickOnBounds="true" AnchorPane.bottomAnchor="126.80000000000001" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="59.200000000000045" AnchorPane.topAnchor="14.0" />
+    <Label layoutX="24.0" layoutY="199.0" text="Title:" />
+    <Label layoutX="23.0" layoutY="228.0" text="Domain:" />
+    <Label layoutX="23.0" layoutY="258.0" text="Description:" />
+    <Label fx:id="certifTitle" layoutX="104.0" layoutY="199.0" text="Label" />
+    <Label fx:id="certifDomain" layoutX="104.0" layoutY="228.0" text="Label" />
+    <Label fx:id="certifDescription" layoutX="104.0" layoutY="258.0" text="Label" />
+</AnchorPane>

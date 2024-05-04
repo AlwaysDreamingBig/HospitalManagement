@@ -64,7 +64,7 @@ public class appointmentsController implements Initializable {
     }
 
     private void openAddAppointment(){
-        Model.getInstance().getpageFactory().showAddAppointment();
+        Model.getInstance().getAdminPageFactory().showAddAppointment();
     }
 
 

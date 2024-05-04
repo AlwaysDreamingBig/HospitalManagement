@@ -81,7 +81,7 @@ public class doctorsController implements Initializable{
                 Blob queryDoctorPicture = queryOutput.getBlob("DoctorPicture");
 
                 if (queryDoctorPicture == null) {
-                    InputStream inputStream = getClass().getResourceAsStream("/Images/noPicture.jpg");
+                    InputStream inputStream = getClass().getResourceAsStream("/Images/doctorPicture.jpg");
                     if (inputStream != null) {
                         System.out.println("Image found");
                     } else {

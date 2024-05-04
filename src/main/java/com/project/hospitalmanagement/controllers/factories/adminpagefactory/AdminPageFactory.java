@@ -1,12 +1,16 @@
 package com.project.hospitalmanagement.controllers.factories.adminpagefactory;
 
 import com.project.hospitalmanagement.controllers.admin.mainwindow.MainWindowController;
+import com.project.hospitalmanagement.controllers.admin.staff.Buttons.onActionCertificationController;
+import com.project.hospitalmanagement.controllers.models.certificationModel;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class AdminPageFactory {
 
@@ -264,8 +268,10 @@ public class AdminPageFactory {
 
 
     /*
-     * Utility functions------------------------------------------------------------------------------------------------------------------
-     */
+     * ----------------------------------------------------------------- Utility functions------------------------------------------------------------------------------------------------------------------
+
+     * ----------------------------------------------------------------                    ----------------------------------------------------------------
+     * */
 
     public void createStage(FXMLLoader loader){
         Scene scene = null;
@@ -281,8 +287,11 @@ public class AdminPageFactory {
     }
 
     /*
-     * Display windows on action-------------------------------------------------------------------------------------------------------------
-     */
+     *------------------------------------------------------------- Display windows on action-------------------------------------------------------------------------------------------------------------
+     *///-----------------------------------------------                                              ---------------------//----------------------------------------------------------------
+    //--------------------------------------------------                                               ----------------------------------//----------------------------------------------------------------//----------------------------------------------------------------
+    //----------------------------------------------------------------//----------------------------------------------------------------//----------------------------------------------------------------
+
 
     public void showAdminWindow(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/MainWindow/MainWindow.fxml"));
@@ -298,57 +307,97 @@ public class AdminPageFactory {
 
     public void showFinanceWindow(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Finances/FinanceOverview.fxml"));
-        MainWindowController adminController = new MainWindowController();
-        loader.setController(adminController);
         createStage(loader);
     }
 
     public void showInventoryWindow(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/General/Maininventory/Inventory.fxml"));
-        MainWindowController adminController = new MainWindowController();
-        loader.setController(adminController);
         createStage(loader);
     }
 
     public void showDoctorWindow(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Doctors/AdminDoctorOverview.fxml"));
-        MainWindowController adminController = new MainWindowController();
-        loader.setController(adminController);
         createStage(loader);
     }
 
     public void showPatientWindow(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Patients/AdminPatientOverview.fxml"));
-        MainWindowController adminController = new MainWindowController();
-        loader.setController(adminController);
+        createStage(loader);
+    }
+    //---------------------------------------------------------------- Staff Management//----------------------------------------------------------------//----------------------------------------------------------------
+    //----------------------------------------------------------------//----------------------------------------------------------------//----------------------------------------------------------------
+    //----------------------------------------------------------------//----------------------------------------------------------------//----------------------------------------------------------------
+    public void showStaffWindow(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Staff/StaffList.fxml"));
         createStage(loader);
     }
 
     public void showDepartmentsWindow(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Staff/AdminStaffDepartment.fxml"));
-        MainWindowController adminController = new MainWindowController();
-        loader.setController(adminController);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Staff/StaffDepartment.fxml"));
         createStage(loader);
     }
 
     public void showCertificationsWindow(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/Admin/Staff/AdminStaffCertification.fxml"));
-        MainWindowController adminController = new MainWindowController();
-        loader.setController(adminController);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/General/Certification/CertificationList.fxml"));
         createStage(loader);
     }
 
     public void showRequestListWindow(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/Admin/Staff/AdminStaffRequest.fxml"));
-        MainWindowController adminController = new MainWindowController();
-        loader.setController(adminController);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Staff/StaffRequest.fxml"));
         createStage(loader);
     }
 
     public void showTrainingWindow(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/Admin/Staff/AdminStaffTraining.fxml"));
-        MainWindowController adminController = new MainWindowController();
-        loader.setController(adminController);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Staff/StaffTraining.fxml"));
         createStage(loader);
     }
+
+    public void showEditDepartmentsWindow(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Staff/Buttons/onActionDepartment.fxml"));
+        createStage(loader);
+    }
+
+    public void showEditTrainingWindow(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Staff/Buttons/onActionTraining.fxml"));
+        createStage(loader);
+    }
+
+    public void showEditRequestWindow(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Staff/Buttons/onActionRequest.fxml"));
+        createStage(loader);
+    }
+
+    public void showEditCertificationsWindow(certificationModel certificateModel, boolean Updater) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Staff/Buttons/onActionCertification.fxml"));
+            loader.load();
+
+            onActionCertificationController controller = loader.getController();
+
+            controller.setFields(certificateModel);
+            controller.setUpdater(Updater);
+
+            Parent parent = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(parent));
+            stage.initStyle(StageStyle.UTILITY);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showAddCertificationWindow(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Staff/Buttons/onActionCertification.fxml"));
+        createStage(loader);
+    }
+
+
+    // ----------------------------------- Add panels
+    public void showAddAppointment(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Appointments/addAppointment.fxml"));
+        createStage(loader);
+    }
+
+
 }
