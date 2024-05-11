@@ -5,6 +5,7 @@ import com.project.hospitalmanagement.controllers.alert.alertMessage;
 import com.project.hospitalmanagement.controllers.database.dataBase;
 import com.project.hospitalmanagement.controllers.models.Model;
 import com.project.hospitalmanagement.controllers.models.certificationModel;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -25,6 +26,7 @@ public class onActionCertificationController implements Initializable {
     public Button cancel_btn;
     private boolean UpdaterEnabled = false;
     private final alertMessage alert = new alertMessage();
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -49,7 +51,7 @@ public class onActionCertificationController implements Initializable {
     }
 
     public void save(){
-        System.out.println("pppppppppppppppppppppppppppppppppppppppppppppp");
+
         dataBase connection = new dataBase();
         Connection connectDB = connection.connectDB();
 
@@ -82,7 +84,6 @@ public class onActionCertificationController implements Initializable {
                     alert.errorMessage("No certification found with the given Description.");
 
                 }
-
 
             } catch (SQLException e) {
                 e.printStackTrace();

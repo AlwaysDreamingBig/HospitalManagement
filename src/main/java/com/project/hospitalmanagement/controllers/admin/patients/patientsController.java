@@ -2,6 +2,7 @@ package com.project.hospitalmanagement.controllers.admin.patients;
 
 
 import com.project.hospitalmanagement.controllers.database.dataBase;
+import com.project.hospitalmanagement.controllers.models.Model;
 import com.project.hospitalmanagement.controllers.models.patientModel;
 import com.project.hospitalmanagement.controllers.utilities.StaffActionButtonTableCell;
 import javafx.collections.FXCollections;
@@ -26,8 +27,6 @@ public class patientsController implements Initializable{
 
     public TextField search_bar;
     public TableView<patientModel> patients_tableView;
-
-    public Button UploadPicture;
     public TableColumn<patientModel, ImageView> PatientPicture;
     public TableColumn<patientModel, Integer> PatientID;
     public TableColumn<patientModel, String> PatientName;
@@ -40,6 +39,8 @@ public class patientsController implements Initializable{
     public TableColumn<patientModel, String> PatientTreatment;
 
     public TableColumn<patientModel, Void> Action;
+    public Button addPatient_btn;
+    public Button refresh_btn;
 
 
     ObservableList<patientModel> patientModelObservableList = FXCollections.observableArrayList();
@@ -47,6 +48,24 @@ public class patientsController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        refreshPatient();
+
+        addListener();
+
+    }
+
+    public void addListener(){
+        addPatient_btn.setOnMouseClicked(event -> openAddPatient());
+        refresh_btn.setOnMouseClicked(event -> refreshPatient());
+    }
+
+    public void openAddPatient(){
+        Model.getInstance().getAdminPageFactory().showAddPatient();
+    }
+    public void refreshPatient() {
+
+        patientModelObservableList.clear();
 
         dataBase connection = new dataBase();
         Connection connectDB = connection.connectDB();
@@ -62,10 +81,10 @@ public class patientsController implements Initializable{
             while(queryOutput.next()){
 
                 Image profilePicture;
-                Blob queryDoctorPicture = queryOutput.getBlob("DoctorPicture");
+                Blob queryDoctorPicture = queryOutput.getBlob("PatientPicture");
 
                 if (queryDoctorPicture == null) {
-                    InputStream inputStream = getClass().getResourceAsStream("/Images/noPicture.jpg");
+                    InputStream inputStream = getClass().getResourceAsStream("/Images/patientPicture.jpg");
                     if (inputStream != null) {
                         System.out.println("Image found");
                     } else {
@@ -160,7 +179,6 @@ public class patientsController implements Initializable{
             Logger.getLogger(patientsController.class.getName()).log(Level.SEVERE, null, e);
             e.printStackTrace();
         }
-
 
     }
 

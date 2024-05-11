@@ -18,8 +18,9 @@ public class roomModel {
 
 
 
-    public roomModel(Integer roomAllocationID, Integer roomNumber, String roomType, String roomPatient, String roomPatientGender, java.sql.Date roomEntry, java.sql.Date roomDeparture) {
+    public roomModel(Integer roomAllocationID, Integer roomNumber, String roomStatus, String roomType, String roomPatient, String roomPatientGender, java.sql.Date roomEntry, java.sql.Date roomDeparture) {
         this.RoomAllocationID = roomAllocationID;
+        this.RoomStatus = roomStatus;
         this.RoomNumber = roomNumber;
         this.RoomType = roomType;
         this.RoomPatient = roomPatient;
@@ -28,11 +29,34 @@ public class roomModel {
         this.RoomDeparture = roomDeparture;
     }
 
+    public roomModel(Integer roomNumber, String roomStatus, String roomType, String roomPatient, String roomPatientGender, java.sql.Date roomEntry, java.sql.Date roomDeparture) {
+        this.RoomStatus = roomStatus;
+        this.RoomNumber = roomNumber;
+        this.RoomType = roomType;
+        this.RoomPatient = roomPatient;
+        this.RoomPatientGender = roomPatientGender;
+        this.RoomEntry = roomEntry;
+        this.RoomDeparture = roomDeparture;
+    }
+
+
     public roomModel(Integer roomID, String roomType, String roomStatus, String roomPrice){
         this.RoomID = roomID;
         this.RoomType = roomType;
         this.RoomStatus = roomStatus;
         this.RoomPrice = roomPrice;
+    }
+
+    public Integer getRoomID() {
+        return RoomID;
+    }
+
+    public String getRoomStatus() {
+        return RoomStatus;
+    }
+
+    public String getRoomPrice() {
+        return RoomPrice;
     }
 
     public Integer getRoomAllocationID() {
@@ -89,6 +113,18 @@ public class roomModel {
 
     public void setRoomDeparture(Date roomDeparture) {
         RoomDeparture = roomDeparture;
+    }
+
+    public void setRoomID(Integer roomID) {
+        RoomID = roomID;
+    }
+
+    public void setRoomStatus(String roomStatus) {
+        RoomStatus = roomStatus;
+    }
+
+    public void setRoomPrice(String roomPrice) {
+        RoomPrice = roomPrice;
     }
 }
 

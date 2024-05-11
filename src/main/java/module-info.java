@@ -36,6 +36,7 @@ module com.project.hospitalmanagement {
     exports com.project.hospitalmanagement.controllers.admin.department;
     exports com.project.hospitalmanagement.controllers.admin.records;
     exports com.project.hospitalmanagement.controllers.admin.inventory;
+    exports com.project.hospitalmanagement.controllers.admin.rooms;
     exports com.project.hospitalmanagement.controllers.general.certifications;
     exports com.project.hospitalmanagement.controllers.patient;
     exports com.project.hospitalmanagement.controllers.doctor;

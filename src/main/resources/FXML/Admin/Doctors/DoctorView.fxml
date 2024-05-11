@@ -16,8 +16,8 @@
 <AnchorPane minHeight="690.0" minWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.doctors.doctorsController">
     <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="50.4" prefHeight="650.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
         <AnchorPane prefHeight="700.0" prefWidth="1060.0">
-             <TextField fx:id="search_bar" layoutX="15.0" layoutY="28.0" prefHeight="26.0" prefWidth="571.0" />
-         <Button layoutX="538.0" layoutY="28.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="48.0" />
+             <TextField fx:id="search_bar" layoutX="15.0" layoutY="28.0" prefHeight="26.0" prefWidth="699.0" />
+         <Button layoutX="666.0" layoutY="28.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="48.0" />
              <TableView fx:id="doctors_tableView" prefHeight="555.0" prefWidth="1151.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="75.0">
                  <columns>
                      <TableColumn fx:id="Picture" prefWidth="75.0" />
@@ -37,18 +37,16 @@
                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                  </columnResizePolicy>
              </TableView>
-         <FontAwesomeIconView glyphName="SEARCH" layoutX="553.0" layoutY="48.0" size="20" />
-            <HBox layoutX="835.0" layoutY="15.0" prefHeight="51.0" prefWidth="342.0" spacing="20.0">
-                <Button fx:id="addDoctor_btn" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0"
-                        text="Add Doctor">
+         <FontAwesomeIconView glyphName="SEARCH" layoutX="681.0" layoutY="48.0" size="20" />
+            <HBox layoutX="760.0" layoutY="27.0" prefHeight="27.0" prefWidth="423.0" spacing="20.0" AnchorPane.rightAnchor="15.200000000000102">
+                <Button fx:id="addDoctor_btn" mnemonicParsing="false" prefHeight="28.0" prefWidth="203.0" text="Add Doctor">
                     <graphic>
-                        <FontAwesomeIconView glyphName="PLUS" size="20"/>
+                        <FontAwesomeIconView glyphName="PLUS" size="20" />
                     </graphic>
                 </Button>
-                <Button fx:id="refresh_btn" mnemonicParsing="false" prefHeight="40.0" prefWidth="149.0"
-                        text="Refesh Table">
+                <Button fx:id="refresh_btn" mnemonicParsing="false" prefHeight="28.0" prefWidth="193.0" text="Refesh Table">
                     <graphic>
-                        <FontAwesomeIconView glyphName="REFRESH" size="20"/>
+                        <FontAwesomeIconView glyphName="REFRESH" size="20" />
                     </graphic>
                 </Button>
             </HBox>

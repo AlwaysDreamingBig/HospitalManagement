@@ -4,46 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="620ccfc5-777f-438b-aa37-3c05c0b1d967" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionCertificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionDepartmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionRequestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionTrainingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/certifications/certificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/certifications/certificationsListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/certificationModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionCertification.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionDepartment.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionRequest.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionTraining.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Certification/Certification.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Certification/CertificationList.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/certif1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/certif10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/certif2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/certif3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/certif4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/certif5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/certif6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/certif7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/certif8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/certif9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/doctorPicture.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/staffPicture.jpg" afterDir="false" />
+    <list default="true" id="620ccfc5-777f-438b-aa37-3c05c0b1d967" name="Changes" comment="Staff management Update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/requests/requestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/requests/requestListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/trainings/trainingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/trainings/trainingListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/requestModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/statusModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/trainingModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Patients/AddPatient.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Rooms/allotNewRoom.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/patientPicture.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/appointments/appointmentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/appointments/appointmentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/doctors/doctorsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/doctors/doctorsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/patients/patientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/patients/patientsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/rooms/roomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/rooms/roomsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionCertificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionCertificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionDepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionDepartmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionRequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionTrainingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionTrainingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/StaffManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/StaffManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/staffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/staffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/factories/PageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/factories/PageFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/factories/adminpagefactory/AdminPageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/factories/adminpagefactory/AdminPageFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/departmentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/departmentModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/roomModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/roomModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/utilities/utilitiesFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/utilities/utilitiesFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Doctors/DoctorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Doctors/DoctorView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Patients/PatientsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Patients/PatientsView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/AdminStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/AdminStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/AdminStaffCertification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/StaffCertification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/AdminStaffDepartment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/StaffDepartment.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/AdminStaffRequest.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/StaffRequest.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/AdminStaffTraining.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/StaffTraining.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/StaffList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/StaffList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionDepartment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionDepartment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionRequest.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionRequest.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionTraining.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionTraining.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Rooms/rooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Rooms/rooms.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,11 +86,11 @@
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\MainWindow" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\General\Rooms" />
+      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\Patients" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\Images" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\General\Certification" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\Staff\EditButton" />
-      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\Staff" />
-      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\General\Records" />
     </key>
   </component>
   <component name="RunManager">
@@ -128,12 +119,22 @@
       <option name="project" value="LOCAL" />
       <updated>1714386034595</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Staff management Update">
+      <option name="closed" value="true" />
+      <created>1714822334865</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714822334865</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value=" commit" />
+    <MESSAGE value="Staff management Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Staff management Update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -158,6 +159,16 @@
                   <option value="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/StaffManagementController.java" />
                 </list>
               </option>
+            </ChatHistoryModel>
+          </value>
+        </entry>
+        <entry key="172b16">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="172b16" />
+              <option name="initiateTms" value="1715325183253" />
+              <option name="request" value="**src/main/resources/FXML/Admin/Doctors/DoctorView.fxml**&#10;```XML&#10;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&#10;&lt;!--&lt;?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?&gt;--&gt;&#10;&#10;&lt;?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?&gt;&#10;&lt;?import javafx.scene.control.Button?&gt;&#10;&lt;?import javafx.scene.control.Label?&gt;&#10;&lt;?import javafx.scene.control.ScrollPane?&gt;&#10;&lt;?import javafx.scene.control.TableColumn?&gt;&#10;&lt;?import javafx.scene.control.TableView?&gt;&#10;&lt;?import javafx.scene.control.TextField?&gt;&#10;&lt;?import javafx.scene.layout.AnchorPane?&gt;&#10;&lt;?import javafx.scene.layout.HBox?&gt;&#10;&lt;?import javafx.scene.text.Font?&gt;&#10;&#10;&lt;AnchorPane minHeight=&quot;690.0&quot; minWidth=&quot;1200.0&quot; xmlns=&quot;http://javafx.com/javafx/21&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; fx:controller=&quot;com.project.hospitalmanagement.controllers.admin.doctors.doctorsController&quot;&gt;&#10;    &lt;ScrollPane fitToHeight=&quot;true&quot; fitToWidth=&quot;true&quot; layoutY=&quot;50.4&quot; prefHeight=&quot;650.0&quot; prefWidth=&quot;1200.0&quot; AnchorPane.bottomAnchor=&quot;0.0&quot; AnchorPane.leftAnchor=&quot;0.0&quot; AnchorPane.rightAnchor=&quot;0.0&quot; AnchorPane.topAnchor=&quot;50.0&quot;&gt;&#10;        &lt;AnchorPane prefHeight=&quot;700.0&quot; prefWidth=&quot;1060.0&quot;&gt;&#10;             &lt;TextField fx:id=&quot;search_bar&quot; layoutX=&quot;15.0&quot; layoutY=&quot;28.0&quot; prefHeight=&quot;26.0&quot; prefWidth=&quot;571.0&quot; /&gt;&#10;         &lt;Button layoutX=&quot;538.0&quot; layoutY=&quot;28.0&quot; mnemonicParsing=&quot;false&quot; prefHeight=&quot;26.0&quot; prefWidth=&quot;48.0&quot; /&gt;&#10;             &lt;TableView fx:id=&quot;doctors_tableView&quot; prefHeight=&quot;555.0&quot; prefWidth=&quot;1151.0&quot; AnchorPane.bottomAnchor=&quot;20.0&quot; AnchorPane.leftAnchor=&quot;15.0&quot; AnchorPane.rightAnchor=&quot;15.0&quot; AnchorPane.topAnchor=&quot;75.0&quot;&gt;&#10;                 &lt;columns&gt;&#10;                     &lt;TableColumn fx:id=&quot;Picture&quot; prefWidth=&quot;75.0&quot; /&gt;&#10;                     &lt;TableColumn fx:id=&quot;DoctorID&quot; prefWidth=&quot;25.0&quot; text=&quot;#&quot; /&gt;&#10;                     &lt;TableColumn fx:id=&quot;DoctorName&quot; prefWidth=&quot;100.0&quot; text=&quot;Name&quot; /&gt;&#10;                     &lt;TableColumn fx:id=&quot;DoctorSpecialization&quot; prefWidth=&quot;100.0&quot; text=&quot;Specialization&quot; /&gt;&#10;                     &lt;TableColumn fx:id=&quot;DoctorDepartment&quot; prefWidth=&quot;100.0&quot; text=&quot;Department&quot; /&gt;&#10;                     &lt;TableColumn fx:id=&quot;DoctorEmail&quot; prefWidth=&quot;150.0&quot; text=&quot;Email&quot; /&gt;&#10;                     &lt;TableColumn fx:id=&quot;DoctorMobile&quot; prefWidth=&quot;100.0&quot; text=&quot;Mobile&quot; /&gt;&#10;                     &lt;TableColumn fx:id=&quot;DoctorEntryDate&quot; prefWidth=&quot;100.0&quot; text=&quot;Starting date&quot; /&gt;&#10;                     &lt;TableColumn fx:id=&quot;DoctorEndDate&quot; prefWidth=&quot;100.0&quot; text=&quot;Ending Date&quot; /&gt;&#10;                     &lt;TableColumn fx:id=&quot;DoctorAccountStatus&quot; prefWidth=&quot;100.0&quot; text=&quot;Status&quot; /&gt;&#10;                     &lt;TableColumn fx:id=&quot;DoctorSalary&quot; prefWidth=&quot;100.0&quot; text=&quot;Salary&quot; /&gt;&#10;                     &lt;TableColumn fx:id=&quot;Action&quot; prefWidth=&quot;100.0&quot; text=&quot;Action&quot; /&gt;&#10;                 &lt;/columns&gt;&#10;                 &lt;columnResizePolicy&gt;&#10;                     &lt;TableView fx:constant=&quot;CONSTRAINED_RESIZE_POLICY&quot; /&gt;&#10;                 &lt;/columnResizePolicy&gt;&#10;             &lt;/TableView&gt;&#10;         &lt;FontAwesomeIconView glyphName=&quot;SEARCH&quot; layoutX=&quot;553.0&quot; layoutY=&quot;48.0&quot; size=&quot;20&quot; /&gt;&#10;            &lt;HBox layoutX=&quot;835.0&quot; layoutY=&quot;15.0&quot; prefHeight=&quot;51.0&quot; prefWidth=&quot;342.0&quot; spacing=&quot;20.0&quot;&gt;&#10;                &lt;Button fx:id=&quot;addDoctor_btn&quot; mnemonicParsing=&quot;false&quot; prefHeight=&quot;40.0&quot; prefWidth=&quot;146.0&quot;&#10;                        text=&quot;Add Doctor&quot;&gt;&#10;                    &lt;graphic&gt;&#10;                        &lt;FontAwesomeIconView glyphName=&quot;PLUS&quot; size=&quot;20&quot;/&gt;&#10;                    &lt;/graphic&gt;&#10;                &lt;/Button&gt;&#10;                &lt;Button fx:id=&quot;refresh_btn&quot; mnemonicParsing=&quot;false&quot; prefHeight=&quot;40.0&quot; prefWidth=&quot;149.0&quot;&#10;                        text=&quot;Refesh Table&quot;&gt;&#10;                    &lt;graphic&gt;&#10;                        &lt;FontAwesomeIconView glyphName=&quot;REFRESH&quot; size=&quot;20&quot;/&gt;&#10;                    &lt;/graphic&gt;&#10;                &lt;/Button&gt;&#10;            &lt;/HBox&gt;&#10;        &lt;/AnchorPane&gt;&#10;    &lt;/ScrollPane&gt;&#10;    &lt;AnchorPane layoutX=&quot;6.0&quot; prefHeight=&quot;44.0&quot; prefWidth=&quot;270.0&quot;&gt;&#10;        &lt;Label layoutX=&quot;14.0&quot; layoutY=&quot;8.0&quot; text=&quot;Doctors  &amp;gt;&quot;&gt;&#10;           &lt;font&gt;&#10;               &lt;Font name=&quot;System Bold&quot; size=&quot;18.0&quot; /&gt;&#10;           &lt;/font&gt;&#10;        &lt;/Label&gt;&#10;        &lt;Label layoutX=&quot;145.0&quot; layoutY=&quot;12.0&quot; text=&quot;Doctor List&quot;&gt;&#10;           &lt;font&gt;&#10;               &lt;Font name=&quot;System Italic&quot; size=&quot;14.0&quot; /&gt;&#10;           &lt;/font&gt;&#10;        &lt;/Label&gt;&#10;        &lt;FontAwesomeIconView glyphName=&quot;USER_MD&quot; layoutX=&quot;120.0&quot; layoutY=&quot;28.0&quot; size=&quot;18&quot; /&gt;&#10;    &lt;/AnchorPane&gt;&#10;&lt;/AnchorPane&gt;&#10;&#10;```" />
+              <option name="response" value="" />
             </ChatHistoryModel>
           </value>
         </entry>

@@ -1,14 +1,19 @@
 package com.project.hospitalmanagement.controllers.utilities;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.project.hospitalmanagement.controllers.alert.alertMessage;
+import javafx.animation.ScaleTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.collections.transformation.FilteredList;
+import javafx.event.EventHandler;
+import javafx.scene.Node;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import java.io.File;
@@ -18,6 +23,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import  com.project.hospitalmanagement.controllers.database.dataBase;
+import javafx.util.Duration;
+
 
 public class utilitiesFunction {
     public static void bindCheckboxToShowPassword(PasswordField passwordField, CheckBox showPasswordCheckbox, TextField viewPassword) {
@@ -131,6 +138,143 @@ public class utilitiesFunction {
             }
         } else {
             System.out.println("No file selected.");
+        }
+    }
+
+    public static String getStringFromListView(ListView<String> MyList) {
+
+        StringBuilder participants = new StringBuilder();
+        for (String participant : MyList.getItems()) {
+            participants.append(participant).append(",");
+        }
+
+        // Remove the trailing comma if participants exist
+        if (participants.length() > 0) {
+            participants.deleteCharAt(participants.length() - 1);
+        }
+
+        return participants.toString();
+    }
+
+
+    public static void populateListViewFromString(String itemsString, ListView<String> listView) {
+        // Populate the ListView with names
+        ObservableList<String> items = FXCollections.observableArrayList();
+        String[] participantNames = itemsString.split(",");
+        items.addAll(participantNames);
+        listView.setItems(items);
+    }
+
+    public static void addStringToListView(String item, ListView<String> listView) {
+        if(item != null){
+            ObservableList<String> items = listView.getItems();
+            items.add(item);
+            listView.setItems(items);
+        }else {
+             alertMessage alert = new alertMessage();
+            alert.errorMessage("No value to add in the list.");
+        }
+
+    }
+
+    public static void removeSelectedFromListView(ListView<String> listView) {
+        int selectedIndex = listView.getSelectionModel().getSelectedIndex();
+
+        if (selectedIndex >= 0) {
+            ObservableList<String> items = listView.getItems();
+            items.remove(selectedIndex);
+        }else {
+            alertMessage alert = new alertMessage();
+            alert.errorMessage("Select item to remove from the list.");
+        }
+    }
+
+    public static void applyClickEffect(Node node) {
+        node.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                // Create a ScaleTransition
+                ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(100), node);
+                scaleTransition.setToX(0.9);
+                scaleTransition.setToY(0.9);
+                scaleTransition.play();
+            }
+        });
+
+        node.setOnMouseReleased(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                // Reverse the transition to give a button click effect
+                ScaleTransition reverseTransition = new ScaleTransition(Duration.millis(100), node);
+                reverseTransition.setToX(1);
+                reverseTransition.setToY(1);
+                reverseTransition.play();
+            }
+        });
+
+        node.setOnMouseEntered(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                // Apply hover effect when mouse enters
+                ScaleTransition hoverTransition = new ScaleTransition(Duration.millis(100), node);
+                hoverTransition.setToX(1.1);
+                hoverTransition.setToY(1.1);
+                hoverTransition.play();
+            }
+        });
+
+        node.setOnMouseExited(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                // Reverse hover effect when mouse exits
+                ScaleTransition reverseHoverTransition = new ScaleTransition(Duration.millis(100), node);
+                reverseHoverTransition.setToX(1);
+                reverseHoverTransition.setToY(1);
+                reverseHoverTransition.play();
+            }
+        });
+    }
+
+    public static <T> void applyFilter(TableView<T> tableView, int columnIndex, String... filterValues) {
+        // Get the column to filter
+        TableColumn<T, ?> columnToFilter = tableView.getColumns().get(columnIndex);
+
+        // Create a new filtered list
+        ObservableList<T> filteredList = FXCollections.observableArrayList();
+
+        // Apply filters based on filterValues
+        for (T item : tableView.getItems()) {
+            // Get the cell value as a String
+            Object cellData = columnToFilter.getCellData(item);
+            if (cellData != null) {
+                String cellValue = cellData.toString().toLowerCase();
+                for (String filter : filterValues) {
+                    if (cellValue.equals(filter.toLowerCase())) {
+                        filteredList.add(item);
+                        break;
+                    }
+                }
+            }
+        }
+
+        // Clear the table and set the filtered list as items
+        tableView.setItems(filteredList);
+    }
+
+    public static String[] getCheckedLabels(CheckBox[] checkboxes) {
+        List<String> checkedLabels = new ArrayList<>();
+        int isOneBoxChecked = 0;
+        for (CheckBox checkbox : checkboxes) {
+            if (checkbox.isSelected()) {
+                checkedLabels.add(checkbox.getText());
+                isOneBoxChecked++;
+            }
+        }
+
+        if (isOneBoxChecked == 0) {
+            return new String[0];
+        } else {
+            return checkedLabels.toArray(new String[0]);
         }
     }
 

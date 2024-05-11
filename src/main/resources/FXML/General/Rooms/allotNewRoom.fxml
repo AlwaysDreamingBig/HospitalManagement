@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane fitToWidth="true" prefHeight="622.0" prefWidth="805.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane prefHeight="800.0" prefWidth="779.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="20.0" styleClass="label_title" text="New Allotment" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0" />
+                  <VBox prefHeight="880.0" prefWidth="779.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="751.0" spacing="50.0">
+                           <children>
+                              <TextField prefHeight="35.0" prefWidth="337.0" promptText="Patient Name*" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="14.0" right="14.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="751.0" spacing="50.0">
+                           <children>
+                              <TextField prefHeight="35.0" prefWidth="337.0" promptText="Room Number" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="14.0" right="14.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="751.0" spacing="50.0">
+                           <children>
+                              <AnchorPane prefHeight="50.0" prefWidth="337.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <DatePicker layoutY="8.0" prefHeight="35.0" prefWidth="337.0" promptText="Admission Date" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="14.0" right="14.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox prefHeight="66.0" prefWidth="790.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="68.0" prefWidth="762.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets left="14.0" right="14.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <AnchorPane prefHeight="66.0" prefWidth="762.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <DatePicker layoutY="15.0" prefHeight="35.0" prefWidth="337.0" promptText="Discharge Date" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="751.0" spacing="50.0">
+                           <children>
+                              <AnchorPane prefHeight="50.0" prefWidth="337.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ComboBox layoutX="-20.0" layoutY="8.0" prefHeight="35.0" prefWidth="337.0" promptText="Select Room Type" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="14.0" right="14.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="751.0" spacing="50.0">
+                           <VBox.margin>
+                              <Insets left="14.0" right="14.0" />
+                           </VBox.margin>
+                           <children>
+                              <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Comment" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <AnchorPane prefHeight="71.0" prefWidth="751.0">
+                           <children>
+                              <Button layoutX="14.0" layoutY="16.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="110.0" text="Upload file" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="48.0" prefWidth="751.0">
+                           <children>
+                              <Button layoutX="533.0" layoutY="3.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="110.0" styleClass="button_save" text="Submit" />
+                              <Button layoutX="666.0" layoutY="3.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="110.0" styleClass="button_cancel" text="Cancel" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

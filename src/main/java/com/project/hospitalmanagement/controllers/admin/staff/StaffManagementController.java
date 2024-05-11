@@ -2,12 +2,10 @@ package com.project.hospitalmanagement.controllers.admin.staff;
 
 import com.project.hospitalmanagement.controllers.alert.alertMessage;
 import com.project.hospitalmanagement.controllers.database.dataBase;
-import com.project.hospitalmanagement.controllers.models.Model;
-import com.project.hospitalmanagement.controllers.models.certificationModel;
-import com.project.hospitalmanagement.controllers.models.departmentModel;
+import com.project.hospitalmanagement.controllers.models.*;
 import com.project.hospitalmanagement.controllers.utilities.myDatabaseUtils.myDatabaseUtils;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import com.project.hospitalmanagement.controllers.utilities.utilitiesFunction;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
@@ -15,7 +13,6 @@ import javafx.geometry.Side;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
@@ -27,26 +24,31 @@ public class StaffManagementController implements Initializable {
     public Button removeDepartment_btn;
     public Button editDepartment_btn;
     public ListView<String> trainingList;
-    public Button addTraining_btn;
-    public Button removeTraining_btn;
-    public Button editTraining_btn;
     public ListView<String> RequestList;
-    public Button addRequest_btn;
-    public Button removeRequest_btn;
-    public Button editRequest_btn;
     public ListView<String> certificationList;
-    public Button addCertification_btn;
-    public Button removeCertification_btn;
-    public Button editCertification_btn;
     public Button StaffMembers_btn;
-    public ImageView employeePicture;
     public TableView<departmentModel> departmentTable;
     public TableColumn<departmentModel, String> DepartmentName;
     public TableColumn<departmentModel, String> DepartmentHead;
     public AnchorPane StaffManagementPane;
     public AnchorPane repartitionGraph;
-    public Label employeeName;
     private final alertMessage alert = new alertMessage();
+    public FontAwesomeIconView refreshCertification_btn;
+    public FontAwesomeIconView refreshRequests_btn;
+    public FontAwesomeIconView refreshDepartment_btn;
+    public FontAwesomeIconView refreshTraining_btn;
+    public FontAwesomeIconView addCertification_btn;
+    public FontAwesomeIconView removeCertification_btn;
+    public FontAwesomeIconView editCertification_btn;
+    public FontAwesomeIconView addRequest_btn;
+    public FontAwesomeIconView removeRequest_btn;
+    public FontAwesomeIconView editRequest_btn;
+    public FontAwesomeIconView seeRequests_btn;
+    public FontAwesomeIconView addTraining_btn;
+    public FontAwesomeIconView removeTraining_btn;
+    public FontAwesomeIconView editTraining_btn;
+    public FontAwesomeIconView seeTrainingss_btn;
+    public FontAwesomeIconView seeCertification_btn;
     private String selectedCertification;
     private String selectedTraining;
     private String selectedRequest;
@@ -172,10 +174,17 @@ public class StaffManagementController implements Initializable {
         removeDepartment_btn.setOnMouseClicked(event -> onDeleteDepartment());
 
         addCertification_btn.setOnMouseClicked(event -> onAddCertification());
-        addRequest_btn.setOnAction(event -> onShowRequest());
-        addTraining_btn.setOnAction(event -> onShowTraining());
+        addRequest_btn.setOnMouseClicked(event -> onAddRequest());
+        addTraining_btn.setOnMouseClicked(event -> onAddTraining());
+
+        refreshCertification_btn.setOnMouseClicked(event -> onRefreshCertification());
+        refreshRequests_btn.setOnMouseClicked(event -> onRefreshRequest());
+        refreshTraining_btn.setOnMouseClicked(event -> onRefreshTraining());
+        refreshDepartment_btn.setOnMouseClicked(event -> onRefreshDepartment());
 
         StaffMembers_btn.setOnMouseClicked(event -> onStaffMembers());
+
+        applyClickEffect();
 
     }
 
@@ -199,6 +208,49 @@ public class StaffManagementController implements Initializable {
         Model.getInstance().getAdminPageFactory().showAddCertificationWindow();
     }
 
+    public void onAddRequest(){
+        Model.getInstance().getAdminPageFactory().showAddRequestWindow();
+    }
+
+    public void onAddTraining(){
+        Model.getInstance().getAdminPageFactory().showAddTrainingWindow();
+    }
+
+    public void onRefreshRequest(){
+        setRequestListView();
+    }
+
+    public void onRefreshTraining(){
+        setTrainingListView();
+    }
+
+    public void onRefreshDepartment(){
+        setDepartmentTableView();
+    }
+
+    public void onRefreshCertification(){
+        setCertificationListView();
+    }
+
+    public void applyClickEffect(){
+        utilitiesFunction.applyClickEffect(editCertification_btn);
+        utilitiesFunction.applyClickEffect(editRequest_btn);
+        utilitiesFunction.applyClickEffect(editTraining_btn);
+        utilitiesFunction.applyClickEffect(addCertification_btn);
+        utilitiesFunction.applyClickEffect(addTraining_btn);
+        utilitiesFunction.applyClickEffect(addRequest_btn);
+        utilitiesFunction.applyClickEffect(removeCertification_btn);
+        utilitiesFunction.applyClickEffect(removeRequest_btn);
+        utilitiesFunction.applyClickEffect(removeTraining_btn);
+        utilitiesFunction.applyClickEffect(refreshCertification_btn);
+        utilitiesFunction.applyClickEffect(refreshDepartment_btn);
+        utilitiesFunction.applyClickEffect(refreshRequests_btn);
+        utilitiesFunction.applyClickEffect(refreshTraining_btn);
+    }
+
+
+
+
     public void onDeleteDepartment(){
 
         dataBase connection = new dataBase();
@@ -217,6 +269,7 @@ public class StaffManagementController implements Initializable {
                 if (deletedQuery > 0) {
 
                     alert.successMessage("Head removed from the table");
+
 
                     setDepartmentTableView();
 
@@ -258,12 +311,13 @@ public class StaffManagementController implements Initializable {
                 // Check if a row was returned
                 if (deletedQuery > 0) {
 
-                    System.out.println("Deleted from the table ");
+
+                    alert.successMessage("Deleted from the table.");
 
                     setCertificationListView();
 
                 }else {
-                    System.out.println("Nothing was Deleted from the table ");
+                    alert.errorMessage("Nothing was Deleted from the table .");
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -299,12 +353,13 @@ public class StaffManagementController implements Initializable {
                 // Check if a row was returned
                 if (deletedQuery > 0) {
 
-                    System.out.println("Deleted from the table ");
+                    alert.successMessage("Deleted from the table.");
 
                     setTrainingListView();
 
                 }else {
-                    System.out.println("Nothing was Deleted from the table ");
+
+                    alert.errorMessage("Nothing was Deleted from the table .");
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -377,18 +432,21 @@ public class StaffManagementController implements Initializable {
                 statement.setString(1, selectedDepartment);
                 ResultSet queryOutput = statement.executeQuery();
 
+                departmentModel department = null;
+
                 // Check if a row was returned
                 if (queryOutput.next()) {
                     // Retrieve values from the result set and create a Certification object
+                    int DepartmentId = queryOutput.getInt("DepartmentID");
                     String DepartmentName = queryOutput.getString("DepartmentName");
                     String DepartmentHead = queryOutput.getString("DepartmentHead");
 
                     System.out.println("CertificationValidityPeriod is " + DepartmentName);
                     System.out.println("CertificationDescription is " + DepartmentHead);
 
-
+                    department = new departmentModel(DepartmentId, DepartmentName, DepartmentHead);
                 }
-                Model.getInstance().getAdminPageFactory().showEditDepartmentsWindow();
+                Model.getInstance().getAdminPageFactory().showEditDepartmentsWindow(department);
 
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -447,7 +505,6 @@ public class StaffManagementController implements Initializable {
         }
 
 
-
     }
 
     public void onEditTraining(){
@@ -459,14 +516,17 @@ public class StaffManagementController implements Initializable {
         String trainingDetailsQuery = "SELECT * FROM trainings WHERE TrainingDescription = ?";
 
         if(selectedTraining != null){
+
             try {
                 PreparedStatement statement = connectDB.prepareStatement(trainingDetailsQuery);
                 statement.setString(1, selectedTraining);
                 ResultSet queryOutput = statement.executeQuery();
 
+                trainingModel training = null;
                 // Check if a row was returned
                 if (queryOutput.next()) {
                     // Retrieve values from the result set and create a Certification object
+                    Integer TrainingID = queryOutput.getInt("TrainingID");
                     String TrainingParticipant = queryOutput.getString("TrainingParticipant");
                     Date TrainingDay = queryOutput.getDate("TrainingDay");
                     Time TrainingStart = queryOutput.getTime("TrainingStart");
@@ -476,19 +536,12 @@ public class StaffManagementController implements Initializable {
                     String TrainingDescription = queryOutput.getString("TrainingDescription");
                     String TrainingDesignation = queryOutput.getString("TrainingDesignation");
 
+                    training = new trainingModel(TrainingID, TrainingParticipant, TrainingDay, TrainingStart, TrainingEnd, TrainingInstructor, TrainingLocation, TrainingDescription, TrainingDesignation);
 
-                    System.out.println("selectedCertificationName is " + TrainingParticipant);
-                    System.out.println("CertificationOrganization is " + TrainingDay);
-                    System.out.println("CertificationValidityPeriod is " + TrainingStart);
-                    System.out.println("CertificationDescription is " + TrainingEnd);
-                    System.out.println("CertificationDescription is " + TrainingInstructor);
-                    System.out.println("CertificationDescription is " + TrainingLocation);
-                    System.out.println("CertificationDescription is " + TrainingDescription);
-                    System.out.println("CertificationDescription is " + TrainingDesignation);
 
                 }
 
-                Model.getInstance().getAdminPageFactory().showEditTrainingWindow();
+                Model.getInstance().getAdminPageFactory().showEditTrainingWindow(training, true);
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
@@ -517,25 +570,23 @@ public class StaffManagementController implements Initializable {
                 statement.setString(1, selectedRequest);
                 ResultSet queryOutput = statement.executeQuery();
 
+                requestModel request = null;
+
                 // Check if a row was returned
                 if (queryOutput.next()) {
                     // Retrieve values from the result set and create a Certification object
+                    int RequestID = queryOutput.getInt("RequestID");
                     String RequestName = queryOutput.getString("RequestName");
                     String RequestType = queryOutput.getString("RequestType");
-                    Timestamp RequestDate = queryOutput.getTimestamp("RequestDate");
+                    Date RequestDate = queryOutput.getDate("RequestDate");
                     String RequestStatus = queryOutput.getString("RequestStatus");
                     String RequestDetails = queryOutput.getString("RequestDetails");
 
-
-                    System.out.println("selectedCertificationName is " + RequestName);
-                    System.out.println("CertificationOrganization is " + RequestType);
-                    System.out.println("CertificationValidityPeriod is " + RequestDate);
-                    System.out.println("CertificationDescription is " + RequestStatus);
-                    System.out.println("CertificationDescription is " + RequestDetails);
+                    request = new requestModel(RequestID, RequestName, RequestType, RequestDate, RequestStatus, RequestDetails);
 
                 }
 
-                Model.getInstance().getAdminPageFactory().showEditRequestWindow();
+                Model.getInstance().getAdminPageFactory().showEditRequestWindow(request, true);
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
@@ -698,6 +749,7 @@ public class StaffManagementController implements Initializable {
 
 
         try {
+
             Statement statement = connectDB.createStatement();
             ResultSet queryOutput = statement.executeQuery(certificationListQuery);
 

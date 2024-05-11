@@ -22,7 +22,13 @@ public class departmentModel {
         this.DepartmentCreation = departmentCreation;
     }
 
-    public departmentModel(String departmentName, String departmentHead){
+    public departmentModel(Integer departmentID, String departmentName, String departmentHead){
+        this.DepartmentID = departmentID;
+        this.DepartmentName = departmentName;
+        this.DepartmentHead = departmentHead;
+    }
+
+    public departmentModel( String departmentName, String departmentHead){
         this.DepartmentName = departmentName;
         this.DepartmentHead = departmentHead;
     }
