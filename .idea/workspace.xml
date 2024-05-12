@@ -4,37 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="620ccfc5-777f-438b-aa37-3c05c0b1d967" name="Changes" comment="Staff management Update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/requests/requestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/requests/requestListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/trainings/trainingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/trainings/trainingListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/requestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/statusModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/trainingModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Patients/AddPatient.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Rooms/allotNewRoom.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/patientPicture.jpg" afterDir="false" />
+    <list default="true" id="620ccfc5-777f-438b-aa37-3c05c0b1d967" name="Changes" comment="Room management Update">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Departments/createDepartment.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/patients/patientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/patients/patientsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/rooms/roomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/rooms/roomsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionCertificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionCertificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionDepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionDepartmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionRequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionTrainingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/Buttons/onActionTrainingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/StaffManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/staff/StaffManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/ambulances/ambulancesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/ambulances/ambulancesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/department/departmentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/department/departmentsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/inventory/inventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/inventory/inventoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/factories/adminpagefactory/AdminPageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/factories/adminpagefactory/AdminPageFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/departmentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/departmentModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/roomModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/roomModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/utilities/utilitiesFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/utilities/utilitiesFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Doctors/DoctorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Doctors/DoctorView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Patients/PatientsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Patients/PatientsView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/AdminStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/AdminStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionDepartment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionDepartment.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionRequest.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionRequest.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionTraining.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/Buttons/onActionTraining.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Rooms/rooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Rooms/rooms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Ambulances/ambulance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Ambulances/ambulance.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Departments/departmentView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Departments/departmentView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/inventory/inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/inventory/inventory.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,11 +66,11 @@
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\MainWindow" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\Departments" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\General\Rooms" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\Patients" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\Images" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\General\Certification" />
-      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\Staff\EditButton" />
     </key>
   </component>
   <component name="RunManager">
@@ -127,14 +107,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714822334865</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Room management Update">
+      <option name="closed" value="true" />
+      <created>1715456182796</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715456182796</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value=" commit" />
     <MESSAGE value="Staff management Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Staff management Update" />
+    <MESSAGE value="Room management Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Room management Update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

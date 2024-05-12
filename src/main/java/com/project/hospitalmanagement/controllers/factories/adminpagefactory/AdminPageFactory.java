@@ -482,5 +482,25 @@ public class AdminPageFactory {
         createStage(loader);
     }
 
+    public void showAddDepartment(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Departments/createDepartment.fxml"));
+        createStage(loader);
+    }
+
+    public void showAddInventoryItem(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/General/inventory/addItem.fxml"));
+        createStage(loader);
+    }
+
+    public void showAddAmbulance(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Ambulances/registerAmbulance.fxml"));
+        createStage(loader);
+    }
+
+    public void showAddNewOrder(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/General/inventory/newOrder.fxml"));
+        createStage(loader);
+    }
+
 
 }

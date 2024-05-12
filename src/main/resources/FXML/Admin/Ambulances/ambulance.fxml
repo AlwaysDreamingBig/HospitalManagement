@@ -2,6 +2,7 @@
 
 <!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>-->
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -15,7 +16,7 @@
     <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <AnchorPane prefHeight="700.0" prefWidth="1060.0">
             <Label layoutX="15.0" layoutY="2.0" text="Ambulances --&gt; Ambulances List" AnchorPane.leftAnchor="15.0" />
-         <TableView fx:id="ambulance_tableView" layoutX="10.0" layoutY="10.0" prefHeight="320.0" prefWidth="1007.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="75.0">
+         <TableView fx:id="ambulance_tableView" layoutX="10.0" layoutY="10.0" prefHeight="320.0" prefWidth="1007.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="75.0">
             <columns>
                <TableColumn fx:id="AmbulanceID" prefWidth="75.0" text="#" />
                <TableColumn fx:id="AmbulanceNumber" prefWidth="100.0" text="Vehicle Nbr" />
@@ -32,17 +33,16 @@
                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
          </TableView>
-            <TextField fx:id="search_bar" layoutX="15.0" layoutY="35.0" prefHeight="20.0" prefWidth="610.0" />
-            <Button layoutX="739.0" layoutY="646.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" text="Prev" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="405.0" />
-            <Button layoutX="404.0" layoutY="646.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="50.0" text="Next" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="404.0" />
-            <HBox layoutX="980.0" layoutY="22.0" prefHeight="50.0" prefWidth="200.0" spacing="20.0" AnchorPane.rightAnchor="14.0">
-                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="download" />
-                <Button fx:id="UploadPicture" mnemonicParsing="false" prefHeight="33.0" prefWidth="37.0" text="Add" />
-                <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="18.0" text="Select all" />
-                <Button mnemonicParsing="false" prefHeight="12.0" prefWidth="18.0" text="Refresh" />
-                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="download" />
-                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="download" />
+            <TextField fx:id="search_bar" layoutX="15.0" layoutY="35.0" prefHeight="26.0" prefWidth="714.0" />
+            <HBox layoutX="897.0" layoutY="28.0" prefHeight="40.0" prefWidth="286.0" spacing="20.0" AnchorPane.rightAnchor="15.0">
+                <Button fx:id="registerAmbulance" mnemonicParsing="false" prefHeight="23.0" prefWidth="147.0" text="Register Ambulance">
+               <graphic>
+                  <FontAwesomeIconView />
+               </graphic></Button>
+                <Button fx:id="refreshAmbulance" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Refresh" />
             </HBox>
+         <Button layoutX="678.0" layoutY="35.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" />
+         <FontAwesomeIconView glyphName="SEARCH" layoutX="696.0" layoutY="55.0" size="20" />
         </AnchorPane>
     </ScrollPane>
 </AnchorPane>

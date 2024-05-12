@@ -253,6 +253,45 @@ public class utilitiesFunction {
                         filteredList.add(item);
                         break;
                     }
+
+                }
+            }
+        }
+
+        // Clear the table and set the filtered list as items
+        tableView.setItems(filteredList);
+    }
+
+    public static <T> void applyIntegerFilter(TableView<T> tableView, int columnIndex, String... filterValues) {
+        // Get the column to filter
+        TableColumn<T, ?> columnToFilter = tableView.getColumns().get(columnIndex);
+
+        // Create a new filtered list
+        ObservableList<T> filteredList = FXCollections.observableArrayList();
+
+        // Apply filters based on filterValues
+        for (T item : tableView.getItems()) {
+            // Get the cell value as a String
+            Object cellData = columnToFilter.getCellData(item);
+            if (cellData != null) {
+                String cellValue = cellData.toString().toLowerCase();
+                int integerCellValue = Integer.parseInt(cellValue);
+                for (String filter : filterValues) {
+
+                    //Integer columns
+                    if (integerCellValue == 0 && filter.equalsIgnoreCase("empty")) {
+                        filteredList.add(item);
+                        break;
+                    }
+                    if ((integerCellValue > 0 && integerCellValue < 10) && filter.equalsIgnoreCase("warning")) {
+                        filteredList.add(item);
+                        break;
+                    }
+                    if (filter.equalsIgnoreCase("")) {
+                        filteredList.add(item);
+                        break;
+                    }
+
                 }
             }
         }

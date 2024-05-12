@@ -2,6 +2,7 @@ package com.project.hospitalmanagement.controllers.admin.department;
 
 
 import com.project.hospitalmanagement.controllers.database.dataBase;
+import com.project.hospitalmanagement.controllers.models.Model;
 import com.project.hospitalmanagement.controllers.models.departmentModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -31,12 +32,35 @@ public class departmentsController implements Initializable{
     public TableColumn<departmentModel, Integer> DepartmentSize;
     public TableColumn<departmentModel, String> DepartmentDescription;
     public TableColumn<departmentModel, Date> DepartmentCreation;
+    public Button addDepartment;
+
+    public Button refresh;
+
+    public TableColumn<departmentModel, Void> action;
 
     ObservableList<departmentModel> departmentModelObservableList = FXCollections.observableArrayList();
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        refreshDepartments();
+        addListener();
+
+    }
+
+    public void addListener(){
+        addDepartment.setOnMouseClicked(event -> onAddDepartment());
+        refresh.setOnMouseClicked(event -> refreshDepartments());
+    }
+
+    public void onAddDepartment(){
+        Model.getInstance().getAdminPageFactory().showAddDepartment();
+    }
+
+    public void refreshDepartments() {
+
+        departmentModelObservableList.clear();
 
         dataBase connection = new dataBase();
         Connection connectDB = connection.connectDB();
@@ -115,7 +139,6 @@ public class departmentsController implements Initializable{
             Logger.getLogger(departmentsController.class.getName()).log(Level.SEVERE, null, e);
             e.printStackTrace();
         }
-
     }
 
 }

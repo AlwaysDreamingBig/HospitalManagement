@@ -2,6 +2,7 @@ package com.project.hospitalmanagement.controllers.admin.ambulances;
 
 
 import com.project.hospitalmanagement.controllers.database.dataBase;
+import com.project.hospitalmanagement.controllers.models.Model;
 import com.project.hospitalmanagement.controllers.models.ambulanceModel;
 import com.project.hospitalmanagement.controllers.utilities.ActionButtonTableCell;
 import javafx.collections.FXCollections;
@@ -35,6 +36,8 @@ public class ambulancesController implements Initializable{
 
     public TableColumn<ambulanceModel, Void> Action;
     public TableView<ambulanceModel> ambulance_tableView;
+    public Button registerAmbulance;
+    public Button refreshAmbulance;
 
 
     ObservableList<ambulanceModel> ambulanceModelObservableList = FXCollections.observableArrayList();
@@ -42,6 +45,22 @@ public class ambulancesController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        refreshAmbulances();
+
+        addListener();
+
+    }
+    public void addListener(){
+        refreshAmbulance.setOnMouseClicked(event -> refreshAmbulances());
+        registerAmbulance.setOnMouseClicked(event -> onRegisterAmbulance());
+    }
+
+    public void onRegisterAmbulance(){
+        Model.getInstance().getAdminPageFactory().showAddAmbulance();
+    }
+    public void refreshAmbulances(){
+         ambulanceModelObservableList.clear();
 
         dataBase connection = new dataBase();
         Connection connectDB = connection.connectDB();
@@ -127,7 +146,6 @@ public class ambulancesController implements Initializable{
             Logger.getLogger(ambulancesController.class.getName()).log(Level.SEVERE, null, e);
             e.printStackTrace();
         }
-
     }
 
 }

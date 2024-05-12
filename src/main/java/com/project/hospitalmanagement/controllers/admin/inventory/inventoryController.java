@@ -2,7 +2,9 @@ package com.project.hospitalmanagement.controllers.admin.inventory;
 
 
 import com.project.hospitalmanagement.controllers.database.dataBase;
+import com.project.hospitalmanagement.controllers.models.Model;
 import com.project.hospitalmanagement.controllers.models.inventoryModel;
+import com.project.hospitalmanagement.controllers.utilities.utilitiesFunction;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -33,6 +35,20 @@ public class inventoryController implements Initializable{
 
     public TableColumn<inventoryModel, Void> Action;
     public AnchorPane BirthAndDeathChart;
+    public CheckBox emptyCheckbox;
+    public CheckBox warningCheckbox;
+    public CheckBox availableCheckbox;
+    public CheckBox unavailableCheckbox;
+    public CheckBox brokenCheckbox;
+    public CheckBox orderedCheckbox;
+
+    public Button apply;
+    public Button showAll;
+    public ListView<String> ordersList;
+    public Button addItem;
+
+    public Button refresh;
+    public Button newOrder;
 
 
     ObservableList<inventoryModel> inventoryModelObservableList = FXCollections.observableArrayList();
@@ -40,6 +56,33 @@ public class inventoryController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        addListener();
+        refreshInventory();
+
+    }
+
+    public void addListener(){
+        refresh.setOnMouseClicked(event -> refreshInventory());
+        apply.setOnMouseClicked(event -> filterRibon());
+        showAll.setOnMouseClicked(event -> refreshInventory());
+        addItem.setOnMouseClicked(event -> onAddItem());
+        newOrder.setOnMouseClicked(event -> onNewOrder());
+    }
+
+    public void onAddItem(){
+        Model.getInstance().getAdminPageFactory().showAddInventoryItem();
+    }
+    public void onNewOrder(){
+        Model.getInstance().getAdminPageFactory().showAddNewOrder();
+    }
+
+
+    public void refreshInventory(){
+
+        unCheckBox();
+
+        inventoryModelObservableList.clear();
 
         dataBase connection = new dataBase();
         Connection connectDB = connection.connectDB();
@@ -120,6 +163,38 @@ public class inventoryController implements Initializable{
             Logger.getLogger(inventoryController.class.getName()).log(Level.SEVERE, null, e);
             e.printStackTrace();
         }
+
+    }
+
+    public void filterRibon(){
+
+        CheckBox[] StockNumberCheckboxes = {emptyCheckbox, warningCheckbox};
+        CheckBox[] StateCheckboxes = {availableCheckbox, unavailableCheckbox,orderedCheckbox, brokenCheckbox};
+
+
+        String[] Stock = utilitiesFunction.getCheckedLabels(StockNumberCheckboxes);
+        String[] State = utilitiesFunction.getCheckedLabels(StateCheckboxes);
+
+        // Check if at least one checkbox is checked for each category
+        if (Stock.length == 0) {
+            Stock = new String[]{"Empty", "Warning",""};
+        }
+        if (State.length == 0) {
+            State = new String[]{"Available", "Unavailable", "Broken", "Ordered",""};
+        }
+
+        utilitiesFunction.applyIntegerFilter(inventory_tableView, 3, Stock);
+        utilitiesFunction.applyFilter(inventory_tableView, 7, State);
+
+    }
+
+    public void unCheckBox(){
+        emptyCheckbox.setSelected(false);
+        warningCheckbox.setSelected(false);
+        unavailableCheckbox.setSelected(false);
+        availableCheckbox.setSelected(false);
+        brokenCheckbox.setSelected(false);
+        orderedCheckbox.setSelected(false);
 
     }
 
