@@ -62,10 +62,10 @@ public class medicinesController implements Initializable{
             while(queryOutput.next()){
 
                 Image profilePicture;
-                Blob queryDoctorPicture = queryOutput.getBlob("DoctorPicture");
+                Blob queryDoctorPicture = queryOutput.getBlob("MedicinePicture");
 
                 if (queryDoctorPicture == null) {
-                    InputStream inputStream = getClass().getResourceAsStream("/Images/noPicture.jpg");
+                    InputStream inputStream = getClass().getResourceAsStream("/Images/drugPicture.jpg");
                     if (inputStream != null) {
                         System.out.println("Image found");
                     } else {

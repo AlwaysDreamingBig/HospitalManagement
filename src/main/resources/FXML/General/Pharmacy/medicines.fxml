@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="690.0" minWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.medicinesController">
+<AnchorPane minHeight="690.0" minWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.pharmacy.medicinesController">
     <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="56.8" prefHeight="643.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
         <AnchorPane prefHeight="700.0" prefWidth="1060.0">
             <TextField fx:id="search_bar" layoutX="15.0" layoutY="35.0" prefHeight="20.0" prefWidth="610.0" />
@@ -46,18 +46,16 @@
          </TableView>
         </AnchorPane>
     </ScrollPane>
-   <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="44.0" prefWidth="270.0">
-      <children>
-         <Label layoutX="14.0" layoutY="8.0" text="Pharmacy  &gt;">
-            <font>
-               <Font name="System Bold" size="18.0" />
-            </font>
-         </Label>
-         <Label layoutX="135.0" layoutY="12.0" text="Medicines List">
-            <font>
-               <Font name="System Italic" size="14.0" />
-            </font>
-         </Label>
-      </children>
-   </AnchorPane>
+    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="44.0" prefWidth="270.0">
+        <Label layoutX="14.0" layoutY="8.0" text="Pharmacy  &gt;">
+           <font>
+               <Font name="System Bold" size="18.0"/>
+           </font>
+        </Label>
+        <Label layoutX="135.0" layoutY="12.0" text="Medicines List">
+           <font>
+               <Font name="System Italic" size="14.0"/>
+           </font>
+        </Label>
+    </AnchorPane>
 </AnchorPane>

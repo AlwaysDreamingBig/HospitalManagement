@@ -5,29 +5,49 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.records.recordsController">
     <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <AnchorPane prefHeight="700.0" prefWidth="1060.0">
-            <AnchorPane fx:id="BirthAndDeathChart" layoutX="21.0" layoutY="25.0" prefHeight="365.0" prefWidth="905.0"
-                        AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="110.0"/>
-            <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="90.0" prefWidth="490.0" AnchorPane.leftAnchor="10.0">
-                <Label layoutX="24.0" layoutY="37.0" text="Number of births:"/>
-                <Label layoutX="179.0" layoutY="37.0" text="Label"/>
-                <Button layoutX="278.0" layoutY="33.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0"
-                        text="Check List"/>
+            <AnchorPane layoutX="44.0" layoutY="14.0" prefHeight="90.0" prefWidth="490.0" AnchorPane.leftAnchor="44.0">
+                <Label layoutX="24.0" layoutY="37.0" text="Number of births:" />
+                <Label fx:id="BirthsNumber" layoutX="179.0" layoutY="37.0" text="Label" />
+                <Button fx:id="BirthList" layoutX="278.0" layoutY="33.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Check Details" />
             </AnchorPane>
-            <AnchorPane layoutX="501.0" layoutY="14.0" prefHeight="90.0" prefWidth="490.0">
-                <Label layoutX="24.0" layoutY="37.0" text="Number of deaths:"/>
-                <Label layoutX="179.0" layoutY="37.0" text="Label"/>
-                <Button layoutX="278.0" layoutY="33.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0"
-                        text="Check List"/>
+            <AnchorPane layoutX="647.0" layoutY="14.0" prefHeight="90.0" prefWidth="490.0">
+                <Label layoutX="24.0" layoutY="37.0" text="Number of deaths:" />
+                <Label fx:id="DeathsNumber" layoutX="179.0" layoutY="37.0" text="Label" />
+                <Button fx:id="DeathList" layoutX="278.0" layoutY="33.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Check Details" />
             </AnchorPane>
-            <AnchorPane layoutX="75.0" layoutY="476.0" prefHeight="500.0" prefWidth="590.0" AnchorPane.leftAnchor="10.0"
-                        AnchorPane.rightAnchor="598.0"/>
-            <AnchorPane layoutX="339.0" layoutY="457.0" prefHeight="500.0" prefWidth="549.0"
-                        AnchorPane.rightAnchor="10.0"/>
+            <HBox layoutX="24.0" layoutY="110.0" prefHeight="446.0" prefWidth="1178.0" spacing="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                <TableView fx:id="Birth_tableView" prefHeight="446.0" prefWidth="451.0" HBox.hgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="BirthChildName" prefWidth="75.0" text="Child's Name" />
+                        <TableColumn fx:id="BirthDate" prefWidth="75.0" text="Birth Date" />
+                        <TableColumn fx:id="BirthMother" prefWidth="75.0" text="Mother" />
+                        <TableColumn fx:id="BloodGroup" prefWidth="75.0" text="Blood Group" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <TableView fx:id="death_tableview" prefHeight="446.0" prefWidth="451.0" HBox.hgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="DeathChildName" prefWidth="75.0" text="Child's Name" />
+                        <TableColumn fx:id="DeathDate" prefWidth="75.0" text="Death Date" />
+                        <TableColumn fx:id="DeathChildMother" prefWidth="75.0" text="Mother" />
+                        <TableColumn fx:id="DeathWatcher" prefWidth="75.0" text="Watcher" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </HBox>
+         <AnchorPane fx:id="graphPane" layoutX="228.0" layoutY="586.0" prefHeight="500.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="586.0" />
         </AnchorPane>
     </ScrollPane>
 </AnchorPane>

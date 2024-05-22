@@ -30,6 +30,13 @@ public class birthModel {
         this.BirthAddress = birthAddress;
     }
 
+    public birthModel(String birthName,java.sql.Date birthDate, String birthMother, String birthBloodGp) {
+        this.BirthName = birthName;
+        this.BirthDate = birthDate;
+        this.BirthBloodGp = birthBloodGp;
+        this.BirthMother = birthMother;
+    }
+
     public Integer getBirthID() {
         return BirthID;
     }

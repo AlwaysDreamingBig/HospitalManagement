@@ -30,6 +30,13 @@ public class deathModel {
         this.DeathNature = deathNature;
     }
 
+    public deathModel(String deathName, java.sql.Date deathDate, String deathMother, String deathInWatch) {
+        this.DeathName = deathName;
+        this.DeathDate = deathDate;
+        this.DeathInWatch = deathInWatch;
+        this.DeathMother = deathMother;
+    }
+
     public Integer getDeathID() {
         return DeathID;
     }

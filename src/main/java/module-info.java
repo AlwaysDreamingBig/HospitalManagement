@@ -15,6 +15,7 @@ module com.project.hospitalmanagement {
     requires org.kordamp.bootstrapfx.core;
     requires mysql.connector.j;
     requires org.jfree.jfreechart;
+    requires org.apache.pdfbox;
 
     opens com.project.hospitalmanagement to javafx.fxml;
     exports com.project.hospitalmanagement;

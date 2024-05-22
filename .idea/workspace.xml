@@ -4,17 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="620ccfc5-777f-438b-aa37-3c05c0b1d967" name="Changes" comment="Room management Update">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Departments/createDepartment.fxml" afterDir="false" />
+    <list default="true" id="620ccfc5-777f-438b-aa37-3c05c0b1d967" name="Changes" comment="Inventory and Ambulances management Update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/lists/doctorList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/lists/patientList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/lists/pharmacyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/lists/staffList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/lists/staffListCell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/paymentManager/paymentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/paymentManager/saleManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/reports/SalesReportGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/orderModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/salesModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/drugPicture.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Head.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/ambulances/ambulancesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/ambulances/ambulancesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/department/departmentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/department/departmentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/inventory/inventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/inventory/inventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/pharmacy/HospitalManagementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/HospitalManagementApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/pharmacy/medicinesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/pharmacy/medicinesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/pharmacy/pharmacyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/pharmacy/pharmacyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/birthsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/birthsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/deathsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/deathsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/recordsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/recordsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/factories/adminpagefactory/AdminPageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/factories/adminpagefactory/AdminPageFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/utilities/utilitiesFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/utilities/utilitiesFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Ambulances/ambulance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Ambulances/ambulance.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Departments/departmentView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Departments/departmentView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/inventory/inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/inventory/inventory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/birthModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/birthModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/deathModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/deathModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/staffModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/staffModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Departments/createDepartment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Departments/createDepartment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/MainWindow/MainWindowTop.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/MainWindow/MainWindowTop.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Pharmacy/medicines.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Pharmacy/medicines.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Pharmacy/pharmacy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Pharmacy/pharmacy.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/births.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/births.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/deaths.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/deaths.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/records.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/records.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/appointments.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/menu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/messageBox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/scrollpane.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/tableview.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +94,11 @@
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\MainWindow" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\java\com\project\hospitalmanagement\controllers\general\lists" />
+      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\Images" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\Departments" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\General\Rooms" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\Patients" />
-      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\Images" />
-      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\General\Certification" />
     </key>
   </component>
   <component name="RunManager">
@@ -115,7 +143,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715456182796</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Inventory and Ambulances management Update">
+      <option name="closed" value="true" />
+      <created>1715514299009</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715514299009</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Inventory and Ambulances management Update">
+      <option name="closed" value="true" />
+      <created>1715514340636</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715514340636</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -123,7 +167,8 @@
     <MESSAGE value=" commit" />
     <MESSAGE value="Staff management Update" />
     <MESSAGE value="Room management Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Room management Update" />
+    <MESSAGE value="Inventory and Ambulances management Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inventory and Ambulances management Update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

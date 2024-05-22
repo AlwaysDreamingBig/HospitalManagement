@@ -3,6 +3,7 @@ package com.project.hospitalmanagement.controllers.admin.records;
 
 import com.project.hospitalmanagement.controllers.database.dataBase;
 import com.project.hospitalmanagement.controllers.models.birthModel;
+import com.project.hospitalmanagement.controllers.utilities.ActionButtonTableCell;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -58,7 +59,7 @@ public class birthsController implements Initializable{
             while(queryOutput.next()){
 
                 Image profilePicture;
-                Blob queryDoctorPicture = queryOutput.getBlob("DoctorPicture");
+                Blob queryDoctorPicture = queryOutput.getBlob("BirthPicture");
 
                 if (queryDoctorPicture == null) {
                     InputStream inputStream = getClass().getResourceAsStream("/Images/babyNoPicture.jpg");
@@ -111,12 +112,11 @@ public class birthsController implements Initializable{
             BirthGender.setCellValueFactory(new PropertyValueFactory<>("BirthGender"));
             BirthDate.setCellValueFactory(new PropertyValueFactory<>("BirthDate"));
             BirthBloodGp.setCellValueFactory(new PropertyValueFactory<>("BirthBloodGp"));
-            BirthMobile.setCellValueFactory(new PropertyValueFactory<>("BirthMobile"));
             BirthMother.setCellValueFactory(new PropertyValueFactory<>("BirthMother"));
             BirthFather.setCellValueFactory(new PropertyValueFactory<>("BirthFather"));
             BirthMobile.setCellValueFactory(new PropertyValueFactory<>("BirthMobile"));
             BirthAddress.setCellValueFactory(new PropertyValueFactory<>("BirthAddress"));
-            //Action.setCellFactory(param -> new ActionButtonTableCell<>());
+            Action.setCellFactory(param -> new ActionButtonTableCell<>());
 
             births_tableView.setItems(birthModelObservableList);
 

@@ -318,6 +318,21 @@ public class AdminPageFactory {
         createStage(loader);
     }
 
+    public void showMedicinesWindow(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/General/Pharmacy/medicines.fxml"));
+        createStage(loader);
+    }
+
+    public void showBirthWindow(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/General/Records/births.fxml"));
+        createStage(loader);
+    }
+
+    public void showDeathWindow(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/General/Records/deaths.fxml"));
+        createStage(loader);
+    }
+
     public void showDoctorWindow(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Doctors/AdminDoctorOverview.fxml"));
         createStage(loader);

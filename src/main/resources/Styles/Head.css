@@ -1,0 +1,23 @@
+/* File: styles.css */
+
+/* Style for the AnchorPane */
+.anchor-pane {
+    -fx-background-color: #ffffff; /* Light grey background */
+    -fx-border-color: #c5cace; /* Light grey border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-padding: 1px; /* Padding inside the pane */
+}
+
+/* Style for the AnchorPane */
+.anchor-pane_title {
+    -fx-background-color: #ffffff; /* Light grey background */
+    -fx-padding: 1px; /* Padding inside the pane */
+}
+
+/* Style for any labels inside the AnchorPane */
+.anchor-pane_title .label {
+    -fx-font-size: 20px; /* Font size for labels */
+    -fx-text-fill: #1475f3; /* Dark grey text color for labels */
+    -fx-font-weight: bold; /* Make label text bold */
+    -fx-effect: dropshadow(gaussian, rgba(100, 100, 100, 0.5), 10, 0.5, 0, 0); /* Drop shadow */
+}

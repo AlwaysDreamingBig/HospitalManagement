@@ -56,6 +56,11 @@ public class staffModel {
 
     }
 
+    public staffModel(String staffName, ImageView staffPicture) {
+        StaffName = staffName;
+        StaffPicture = staffPicture;
+    }
+
     public ImageView getStaffPicture() {
         return StaffPicture;
     }

@@ -3,6 +3,7 @@ package com.project.hospitalmanagement.controllers.admin.records;
 
 import com.project.hospitalmanagement.controllers.database.dataBase;
 import com.project.hospitalmanagement.controllers.models.deathModel;
+import com.project.hospitalmanagement.controllers.utilities.ActionButtonTableCell;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -58,7 +59,7 @@ public class deathsController implements Initializable{
             while(queryOutput.next()){
 
                 Image profilePicture;
-                Blob queryDoctorPicture = queryOutput.getBlob("DoctorPicture");
+                Blob queryDoctorPicture = queryOutput.getBlob("DeathPicture");
 
                 if (queryDoctorPicture == null) {
                     InputStream inputStream = getClass().getResourceAsStream("/Images/babyNoPicture.jpg");
@@ -111,12 +112,11 @@ public class deathsController implements Initializable{
             DeathGender.setCellValueFactory(new PropertyValueFactory<>("DeathGender"));
             DeathDate.setCellValueFactory(new PropertyValueFactory<>("DeathDate"));
             DeathInWatch.setCellValueFactory(new PropertyValueFactory<>("DeathInWatch"));
-            DeathMobile.setCellValueFactory(new PropertyValueFactory<>("DeathMobile"));
             DeathMother.setCellValueFactory(new PropertyValueFactory<>("DeathMother"));
             DeathFather.setCellValueFactory(new PropertyValueFactory<>("DeathFather"));
             DeathMobile.setCellValueFactory(new PropertyValueFactory<>("DeathMobile"));
             DeathNature.setCellValueFactory(new PropertyValueFactory<>("DeathNature"));
-            //Action.setCellFactory(param -> new ActionButtonTableCell<>());
+            Action.setCellFactory(param -> new ActionButtonTableCell<>());
 
             deaths_tableView.setItems(deathModelObservableList);
 
