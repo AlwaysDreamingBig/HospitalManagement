@@ -1,0 +1,60 @@
+/* Styling for the AnchorPane menu */
+.anchor-pane_mainWindow {
+    -fx-background-color: rgba(11, 26, 247, 0.048); /* Background color */
+}
+
+/* style.css main scrollPane */
+.scroll-pane {
+    -fx-background-color: rgba(11, 26, 247, 0.048);
+}
+
+/* style.css main Vbox */
+.main_vbox {
+    -fx-background-color: rgba(11, 26, 247, 0.048);
+}
+
+.anchor-pane_infos {
+    -fx-background-color: white;
+    -fx-background-radius: 10px; /* Adjust the radius as needed */
+Dashboard.css}
+
+.anchor-pane_doctors {
+    -fx-background-color: rgba(0, 0, 255, 0.175);
+}
+
+.anchor-pane_patients {
+    -fx-background-color: rgba(255, 166, 0, 0.266);
+}
+
+.anchor-pane_staffs {
+    -fx-background-color: rgba(0, 128, 0, 0.216);;
+}
+
+.anchor-pane_appointments {
+    -fx-background-color: rgba(128, 0, 128, 0.299);
+}
+
+#icon_appointments {
+    -fx-font-family: "FontAwesome";
+    -fx-fill: rgba(128, 0, 128, 0.700); /* Set the icon color to blue */
+}
+
+#icon_doctors {
+    -fx-font-family: "FontAwesome";
+    -fx-fill: rgba(0, 0, 255, 0.500); /* Set the icon color to blue */
+}
+
+#icon_patients {
+    -fx-font-family: "FontAwesome";
+    -fx-fill: rgba(255, 166, 0, 0.500); /* Set the icon color to blue */
+}
+
+#icon_staffs {
+    -fx-font-family: "FontAwesome";
+    -fx-fill: rgba(0, 128, 0, 0.500); /* Set the icon color to blue */
+}
+
+
+
+
+

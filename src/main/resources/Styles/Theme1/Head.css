@@ -1,0 +1,43 @@
+/* Styling for the AnchorPane */
+.anchor-pane {
+    -fx-background-color: #6264A7; /* Background color */
+}
+
+/* Styling for the AnchorPane title */
+.anchor-pane_title {
+    -fx-background-color: #6264A7; /* Background color */
+}
+
+.anchor-pane .label {
+    -fx-font-size: 14px; /* Font size */
+    -fx-font-family: "Times New Roman"; /* Font family */
+    -fx-text-fill: #ebe9e9; /* Text color */
+}
+
+.anchor-pane .label2 {
+    -fx-font-size: 20px; /* Font size */
+    -fx-font-family: "Times New Roman"; /* Font family */
+    -fx-text-fill: black; /* Text color */
+}
+
+.anchor-pane_title .label {
+    -fx-font-size: 14px; /* Font size */
+    -fx-font-family: "Times New Roman"; /* Font family */
+    -fx-font-size: 20px; /* Font size */
+    -fx-text-fill: #cccccc; /* Text color */
+    -fx-font-style: italic; /* Italic font style */
+    -fx-font-weight: bold; /* Bold font weight */
+    -fx-padding: 5px; /* Padding around the label */
+    -fx-effect: dropshadow(gaussian, rgb(52, 129, 245), 10, 010, 0, 0); /* Red shadow effect */
+}
+
+.anchor-pane_title .label:hover {
+    -fx-font-size: 28px; /* Font size */
+}
+
+/* style.css */
+#icon1 {
+    -fx-font-family: "FontAwesome";
+    -fx-fill: white; /* Set the icon color to blue */
+}
+

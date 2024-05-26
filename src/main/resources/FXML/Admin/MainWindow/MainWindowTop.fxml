@@ -6,21 +6,21 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="50.0" prefWidth="1200.0" styleClass="anchor-pane" stylesheets="@../../../Styles/Head.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.mainwindow.MainFormHeadController">
+<AnchorPane prefHeight="50.0" prefWidth="1200.0" styleClass="anchor-pane" stylesheets="@../../../Styles/Theme1/Head.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.mainwindow.MainFormHeadController">
    <AnchorPane layoutX="9.600000000000001" layoutY="8.0" prefHeight="46.0" prefWidth="253.0" styleClass="anchor-pane_title" AnchorPane.leftAnchor="6.0">
-      <Label layoutX="57.0" layoutY="8.0" text="YAKAM A. Institute" />
-      <FontAwesomeIconView glyphName="H_SQUARE" layoutX="14.0" layoutY="33.0" size="30" />
+      <Label layoutX="57.0" layoutY="5.0" text="YAKAM A. Institute" />
+      <FontAwesomeIconView id="icon1" glyphName="H_SQUARE" layoutX="14.0" layoutY="33.0" size="30" />
    </AnchorPane>
    <Circle fill="#f3f7fa" layoutX="1123.0" layoutY="30.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="57.0" />
    <Circle fill="#1fff3a" layoutX="1135.0" layoutY="41.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="56.0" />
    <Label layoutX="1150.0" layoutY="29.0" text="Online" AnchorPane.rightAnchor="14.799999999999955" />
-   <Label fx:id="user_letter" layoutX="1114.0" layoutY="19.0" text="C" AnchorPane.rightAnchor="70.79999999999995">
+   <Label fx:id="user_letter" layoutX="1114.0" layoutY="19.0" styleClass="label2" text="C" AnchorPane.rightAnchor="70.79999999999995">
       <font>
          <Font name="Times New Roman Bold" size="20.0" />
       </font>
    </Label>
-   <Label fx:id="username" layoutX="948.0" layoutY="23.0" text="Welcome, Carelle Kana" AnchorPane.rightAnchor="131.20000000000005" />
-   <Label fx:id="form_name" layoutX="370.0" layoutY="21.0" text="Form name" AnchorPane.leftAnchor="370.0" />
-   <FontAwesomeIconView fx:id="notif_bell" glyphName="BELL" layoutX="917.0" layoutY="36.0" size="20" />
-   <FontAwesomeIconView fx:id="menu" glyphName="BARS" layoutX="330.0" layoutY="37.0" size="20" />
+   <Label fx:id="username" layoutX="948.0" layoutY="21.0" text="Welcome, Carelle Kana" AnchorPane.rightAnchor="131.20000000000005" />
+   <Label fx:id="form_name" layoutX="370.4" layoutY="19.0" text="Form name" AnchorPane.leftAnchor="370.4" />
+   <FontAwesomeIconView id="icon1" fx:id="notif_bell" glyphName="BELL" layoutX="888.6" layoutY="36.0" size="24" AnchorPane.rightAnchor="287.4" />
+   <FontAwesomeIconView id="icon1" fx:id="menu" glyphName="BARS" layoutX="330.0" layoutY="37.0" size="24" />
 </AnchorPane>

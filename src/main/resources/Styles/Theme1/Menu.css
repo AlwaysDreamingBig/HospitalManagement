@@ -1,0 +1,79 @@
+/* Styling for the AnchorPane menu */
+.anchor-pane_menu {
+    -fx-background-color: white; /* Background color */
+    -fx-background-radius: 0 15 15 0; /* Top-left, top-right, bottom-right, bottom-left */
+}
+
+/* Styling for the button in the VBox menu */
+.anchor-pane_menu .vbox .button {
+    -fx-background-color: #ffffff; /* White background color of the button */
+    -fx-text-fill: #1a1919; /* Dark text color for contrast */
+    -fx-font-size: 14px; /* Font size */
+    -fx-font-family: "Georgia"; /* Font family */
+    -fx-transition: -fx-transform 0.2s, -fx-effect 0.2s; /* Smooth transition */
+}
+
+.anchor-pane_menu .vbox .button:hover {
+    -fx-background-color:  rgba(0, 0, 255, 0.100); /* Light gray background color on hover */
+    -fx-text-fill: #000000; /* Dark text color for contrast */
+    -fx-font-size: 16px; /* Font size */
+}
+
+.anchor-pane_menu .vbox .button:pressed {
+    -fx-background-color: rgb(196, 216, 247); /* Darker gray background color when clicked */
+    -fx-border-color: #bcbcbc; /* Darker border color when clicked */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.5, 0, 0); /* Return to original shadow */
+}
+
+/* Hover effect for the label */
+.anchor-pane_menu .label:hover {
+    -fx-text-fill: #2076f8; /* Blue text color on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.5, 0, 0); /* Slightly stronger shadow effect */
+}
+
+/* style.css */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 255, 0.55), 5, 0.5, 0, 0);
+    -fx-blend-mode: multiply; /* Optional: ensures the color blends properly */
+    -fx-background-color: blue; /* Sets the blue color for the ImageView */
+    -fx-padding: 10px; /* Optional: add some padding around the image */
+}
+
+.scroll-pane {
+    -fx-hbar-policy: NEVER;
+    -fx-vbar-policy: NEVER;
+}
+
+/*exit button styling*/
+
+.anchor-pane_menu .exit_button {
+    -fx-background-color: white; /* White background color of the button */
+    -fx-text-fill: #1a1919; /* Dark text color for contrast */
+    -fx-font-size: 14px; /* Font size */
+    -fx-font-family: "Georgia"; /* Font family */
+    -fx-transition: -fx-transform 0.2s, -fx-effect 0.2s; /* Smooth transition */
+}
+
+.anchor-pane_menu .exit_button:hover {
+    -fx-background-color: #ec7478; /* Light gray background color on hover */
+    -fx-text-fill: #000000; /* Dark text color for contrast */
+    -fx-font-size: 16px; /* Font size */
+}
+
+.anchor-pane_menu .exit_button:pressed {
+    -fx-background-color: #ef0911; /* Darker gray background color when clicked */
+    -fx-border-color: #bcbcbc; /* Darker border color when clicked */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.5, 0, 0); /* Return to original shadow */
+}
+
+/*button fontawesomeIcons styling*/
+#icon1 {
+    -fx-font-family: "FontAwesome";
+    -fx-fill: rgba(0, 0, 255, 0.366); /* Set the icon color to blue */
+}
+
+#icon2 {
+    -fx-font-family: "FontAwesome";
+    -fx-fill: black; /* Set the icon color to blue */
+}
+

@@ -1,0 +1,49 @@
+/* Styling for the AnchorPane menu */
+.anchor-pane_mainWindow {
+    -fx-background-color: rgba(11, 26, 247, 0.048); /* Background color */
+}
+
+/* style.css main scrollPane */
+.scroll-pane {
+    -fx-background-color: rgba(11, 26, 247, 0.048);
+}
+
+
+/* Styling the TextField */
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-background-insets: 0;
+    -fx-padding: 5px;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-font-size: 14px;
+}
+
+/* Focused state styling */
+.text-field:focused {
+    -fx-border-color: #0000ff;
+    -fx-background-color: #ffffff;
+}
+
+/* Placeholder text (prompt text) styling */
+.text-field .text {
+    -fx-fill: #aaaaaa;
+}
+
+/* Disabled state styling */
+.text-field:disabled {
+    -fx-opacity: 0.7;
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #dddddd;
+}
+
+
+
+
+
+
+
+
+

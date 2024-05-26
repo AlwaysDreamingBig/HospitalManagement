@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -12,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="690.0" minWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.dashboard.DashboardController">
+<AnchorPane minHeight="690.0" minWidth="1200.0" styleClass="anchor-pane_mainWindow" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.dashboard.DashboardController">
     <AnchorPane prefHeight="44.0" prefWidth="270.0">
         <Label layoutX="14.0" layoutY="8.0" text="Dashboard   &gt;">
             <font>
@@ -26,125 +28,132 @@
         </Label>
         <FontAwesomeIconView glyphName="HOME" layoutX="145.0" layoutY="28.0" size="18" />
     </AnchorPane>
-    <AnchorPane layoutX="14.0" layoutY="56.8" prefHeight="643.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
-        <ScrollPane fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="1200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <VBox fillWidth="true" spacing="20.0" VBox.vgrow="ALWAYS">
-                <HBox prefHeight="166.0" prefWidth="1000.0" spacing="40.0">
-                    <AnchorPane prefHeight="166.0" prefWidth="187.0" HBox.hgrow="ALWAYS">
-                        <FontAwesomeIconView glyphName="CALENDAR" layoutX="14.0" layoutY="97.0" size="70" />
-                        <Label layoutX="114.0" layoutY="30.0" text="Appointments">
-                            <font>
-                                <Font name="System Bold" size="14.0" />
-                            </font>
-                        </Label>
-                        <Label fx:id="appointments_nbr" layoutX="145.0" layoutY="83.0" text="100">
-                            <font>
-                                <Font name="System Bold" size="18.0" />
-                            </font>
-                        </Label>
-                        <AnchorPane layoutX="14.0" layoutY="100.0" prefHeight="44.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                    </AnchorPane>
-                    <AnchorPane prefHeight="166.0" prefWidth="187.0" HBox.hgrow="ALWAYS">
-                        <FontAwesomeIconView glyphName="USER_MD" layoutX="24.0" layoutY="100.0" size="80" />
-                        <Label layoutX="161.0" layoutY="27.0" text="Doctors">
-                            <font>
-                                <Font name="System Bold" size="14.0" />
-                            </font>
-                        </Label>
-                        <Label fx:id="doctor_nbr" layoutX="171.0" layoutY="83.0" text="100">
-                            <font>
-                                <Font name="System Bold" size="18.0" />
-                            </font>
-                        </Label>
-                        <AnchorPane layoutX="14.0" layoutY="100.0" prefHeight="44.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                    </AnchorPane>
-                    <AnchorPane prefHeight="166.0" prefWidth="187.0" HBox.hgrow="ALWAYS">
-                        <FontAwesomeIconView glyphName="USER" layoutX="33.0" layoutY="100.0" size="80" />
-                        <Label layoutX="177.0" layoutY="31.0" text="Patients">
-                            <font>
-                                <Font name="System Bold" size="14.0" />
-                            </font>
-                        </Label>
-                        <Label fx:id="patients_nbr" layoutX="188.0" layoutY="83.0" text="100">
-                            <font>
-                                <Font name="System Bold" size="18.0" />
-                            </font>
-                        </Label>
-                        <AnchorPane layoutX="14.0" layoutY="100.0" prefHeight="44.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                    </AnchorPane>
-                    <AnchorPane prefHeight="166.0" prefWidth="187.0" HBox.hgrow="ALWAYS">
-                        <FontAwesomeIconView glyphName="USERS" layoutX="33.0" layoutY="100.0" size="80" />
-                        <Label layoutX="177.0" layoutY="31.0" text="Staff Members">
-                            <font>
-                                <Font name="System Bold" size="14.0" />
-                            </font>
-                        </Label>
-                        <Label fx:id="staff_nbr" layoutX="210.0" layoutY="83.0" text="100">
-                            <font>
-                                <Font name="System Bold" size="18.0" />
-                            </font>
-                        </Label>
-                        <AnchorPane layoutX="14.0" layoutY="100.0" prefHeight="44.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                    </AnchorPane>
-                </HBox>
-                <HBox prefHeight="350.0" prefWidth="1185.0" spacing="30.0">
-               <AnchorPane fx:id="attendanceChart" prefHeight="325.0" prefWidth="567.0" />
-                    <AnchorPane prefHeight="378.0" prefWidth="430.0" HBox.hgrow="ALWAYS">
-                        <Label layoutX="238.0" layoutY="16.0" text="Orders History" AnchorPane.leftAnchor="238.0" />
-                         <ListView fx:id="inventory_order_list" layoutY="46.4" prefHeight="304.0" prefWidth="586.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0" />
-                  <Button layoutX="493.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="120.0" text="All Orders" AnchorPane.rightAnchor="10.0" />
-                    </AnchorPane>
-                </HBox>
-                <HBox prefHeight="600.0" prefWidth="1000.0" spacing="30.0">
-                    <AnchorPane prefHeight="700.0" prefWidth="700.0" HBox.hgrow="ALWAYS">
-                        <TableView fx:id="dailyAppointment" layoutX="110.0" layoutY="52.8" prefHeight="347.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0">
-                            <columns>
-                                <TableColumn fx:id="AppointmentID" prefWidth="69.59999924898148" text="Reference ID" />
-                                <TableColumn fx:id="PatientName" prefWidth="156.0" text="Patient" />
-                                <TableColumn fx:id="Doctor" prefWidth="175.2000274658203" text="Doctor" />
-                                <TableColumn fx:id="Date" prefWidth="108.79998779296875" text="Date" />
-                                <TableColumn fx:id="Time" prefWidth="76.79998779296875" text="Time" />
-                                <TableColumn fx:id="Injury" prefWidth="128.800048828125" text="Injury" />
-                                <TableColumn fx:id="Action" prefWidth="100.0" text="Edit" />
-                            </columns>
-                            <columnResizePolicy>
-                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                            </columnResizePolicy>
-                        </TableView>
-                        <Label layoutX="6.0" layoutY="23.0" text="Booked Appointments" />
-                    </AnchorPane>
-                    <AnchorPane prefHeight="602.0" prefWidth="342.0">
-                        <TableView fx:id="doctorAvailability" layoutX="110.0" layoutY="52.0" prefHeight="348.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
-                            <columns>
-                        <TableColumn fx:id="DoctorPicture" prefWidth="63.20000916719437" />
-                                <TableColumn fx:id="DoctorName" prefWidth="170.0" text="Doctor" />
-                                <TableColumn fx:id="Availability" prefWidth="107.2000793457031" text="Availability" />
-                            </columns>
-                        </TableView>
-                        <Label layoutY="14.0" text="Doctors availability" />
-                    </AnchorPane>
-                </HBox>
-                <HBox prefHeight="600.0" prefWidth="1000.0" spacing="30.0">
-                    <AnchorPane prefHeight="400.0" prefWidth="1000.0" HBox.hgrow="ALWAYS">
-                        <TableView fx:id="weeklyOperations" layoutX="110.0" layoutY="52.0" prefHeight="348.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
-                            <columns>
-                                <TableColumn fx:id="Startingtime" prefWidth="100.0" text="#" />
-                                <TableColumn fx:id="patientName" prefWidth="200.0" text="Patient Name" />
-                                <TableColumn fx:id="chefDoctor" prefWidth="150.0" text="Chief Doctor" />
-                                <TableColumn fx:id="DoctorsTeam" prefWidth="150.0" text="Doctors Team" />
-                                <TableColumn fx:id="OperationDate" prefWidth="100.0" text="Date" />
-                                <TableColumn fx:id="MedicalHistory" prefWidth="100.0" text="Patient Med History" />
-                                <TableColumn fx:id="Diagnostic" prefWidth="100.0" text="Diagnostic" />
-                                <TableColumn fx:id="action" prefWidth="100.0" text="Edit" />
-                            </columns>
-                            <columnResizePolicy>
-                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                            </columnResizePolicy>
-                        </TableView>
-                        <Label layoutY="14.0" text="Weekly Operations" />
-                    </AnchorPane>
-                </HBox>
-            </VBox>
-        </ScrollPane>
-    </AnchorPane>
+     <ScrollPane fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <VBox fillWidth="true" spacing="20.0" styleClass="main_vbox" VBox.vgrow="ALWAYS">
+             <HBox prefHeight="166.0" prefWidth="1000.0" spacing="20.0">
+                 <AnchorPane prefHeight="166.0" prefWidth="187.0" styleClass="anchor-pane_infos" HBox.hgrow="ALWAYS">
+                     <FontAwesomeIconView id="icon_appointments" glyphName="CALENDAR" layoutX="14.0" layoutY="97.0" selectionFill="#d42323" size="70" />
+                     <Label layoutX="114.0" layoutY="30.0" text="Appointments">
+                         <font>
+                             <Font name="System Bold" size="14.0" />
+                         </font>
+                     </Label>
+                     <Label fx:id="appointments_nbr" layoutX="145.0" layoutY="83.0" text="100">
+                         <font>
+                             <Font name="System Bold" size="18.0" />
+                         </font>
+                     </Label>
+                     <AnchorPane layoutX="14.0" layoutY="100.0" prefHeight="44.0" prefWidth="200.0" styleClass="anchor-pane_appointments" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                 </AnchorPane>
+                 <AnchorPane prefHeight="166.0" prefWidth="187.0" styleClass="anchor-pane_infos" HBox.hgrow="ALWAYS">
+                     <FontAwesomeIconView id="icon_doctors" glyphName="USER_MD" layoutX="24.0" layoutY="100.0" size="80" />
+                     <Label layoutX="161.0" layoutY="27.0" text="Doctors">
+                         <font>
+                             <Font name="System Bold" size="14.0" />
+                         </font>
+                     </Label>
+                     <Label fx:id="doctor_nbr" layoutX="171.0" layoutY="83.0" text="100">
+                         <font>
+                             <Font name="System Bold" size="18.0" />
+                         </font>
+                     </Label>
+                     <AnchorPane layoutX="14.0" layoutY="100.0" prefHeight="44.0" prefWidth="200.0" styleClass="anchor-pane_doctors" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                 </AnchorPane>
+                 <AnchorPane prefHeight="166.0" prefWidth="187.0" styleClass="anchor-pane_infos" HBox.hgrow="ALWAYS">
+                     <FontAwesomeIconView id="icon_patients" glyphName="USER" layoutX="33.0" layoutY="100.0" size="80" />
+                     <Label layoutX="177.0" layoutY="31.0" text="Patients">
+                         <font>
+                             <Font name="System Bold" size="14.0" />
+                         </font>
+                     </Label>
+                     <Label fx:id="patients_nbr" layoutX="188.0" layoutY="83.0" text="100">
+                         <font>
+                             <Font name="System Bold" size="18.0" />
+                         </font>
+                     </Label>
+                     <AnchorPane layoutX="14.0" layoutY="100.0" prefHeight="44.0" prefWidth="200.0" styleClass="anchor-pane_patients" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                 </AnchorPane>
+                 <AnchorPane prefHeight="166.0" prefWidth="187.0" styleClass="anchor-pane_infos" HBox.hgrow="ALWAYS">
+                     <FontAwesomeIconView id="icon_staffs" glyphName="USERS" layoutX="33.0" layoutY="100.0" size="80" />
+                     <Label layoutX="143.0" layoutY="31.0" text="Staff Members">
+                         <font>
+                             <Font name="System Bold" size="14.0" />
+                         </font>
+                     </Label>
+                     <Label fx:id="staff_nbr" layoutX="192.0" layoutY="83.0" text="100">
+                         <font>
+                             <Font name="System Bold" size="18.0" />
+                         </font>
+                     </Label>
+                     <AnchorPane layoutX="14.0" layoutY="100.0" prefHeight="44.0" prefWidth="200.0" styleClass="anchor-pane_staffs" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                 </AnchorPane>
+             </HBox>
+             <HBox prefHeight="350.0" prefWidth="1185.0" spacing="20.0">
+            <AnchorPane fx:id="attendanceChart" prefHeight="325.0" prefWidth="567.0" styleClass="anchor-pane_infos" HBox.hgrow="ALWAYS" />
+                 <AnchorPane prefHeight="378.0" prefWidth="430.0" styleClass="anchor-pane_infos" HBox.hgrow="ALWAYS">
+                     <Label layoutX="238.0" layoutY="16.0" text="Orders History" AnchorPane.leftAnchor="238.0" />
+                      <ListView fx:id="inventory_order_list" layoutY="46.4" prefHeight="304.0" prefWidth="586.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0" />
+               <Button layoutX="493.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="120.0" text="All Orders" AnchorPane.rightAnchor="10.0" />
+                 </AnchorPane>
+             </HBox>
+             <HBox prefHeight="600.0" prefWidth="1000.0" spacing="20.0">
+                 <AnchorPane prefHeight="700.0" prefWidth="700.0" styleClass="anchor-pane_infos" HBox.hgrow="ALWAYS">
+                     <TableView fx:id="dailyAppointment" layoutX="110.0" layoutY="52.8" prefHeight="347.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0">
+                         <columns>
+                             <TableColumn fx:id="AppointmentID" prefWidth="69.59999924898148" text="Reference ID" />
+                             <TableColumn fx:id="PatientName" prefWidth="156.0" text="Patient" />
+                             <TableColumn fx:id="Doctor" prefWidth="175.2000274658203" text="Doctor" />
+                             <TableColumn fx:id="Date" prefWidth="108.79998779296875" text="Date" />
+                             <TableColumn fx:id="Time" prefWidth="76.79998779296875" text="Time" />
+                             <TableColumn fx:id="Injury" prefWidth="128.800048828125" text="Injury" />
+                             <TableColumn fx:id="Action" prefWidth="100.0" text="Edit" />
+                         </columns>
+                         <columnResizePolicy>
+                             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                         </columnResizePolicy>
+                     </TableView>
+                     <Label layoutX="6.0" layoutY="23.0" text="Booked Appointments" />
+                 </AnchorPane>
+                 <AnchorPane prefHeight="602.0" prefWidth="342.0" styleClass="anchor-pane_infos">
+                     <TableView fx:id="doctorAvailability" layoutX="110.0" layoutY="52.0" prefHeight="348.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+                         <columns>
+                     <TableColumn fx:id="DoctorPicture" prefWidth="63.20000916719437" />
+                             <TableColumn fx:id="DoctorName" prefWidth="170.0" text="Doctor" />
+                             <TableColumn fx:id="Availability" prefWidth="107.2000793457031" text="Availability" />
+                         </columns>
+                     </TableView>
+                     <Label layoutY="14.0" text="Doctors availability" />
+                 </AnchorPane>
+             </HBox>
+             <HBox prefHeight="600.0" prefWidth="1000.0" spacing="20.0">
+                 <AnchorPane prefHeight="400.0" prefWidth="1000.0" styleClass="anchor-pane_infos" HBox.hgrow="ALWAYS">
+                     <TableView fx:id="weeklyOperations" layoutX="110.0" layoutY="52.0" prefHeight="348.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+                         <columns>
+                             <TableColumn fx:id="Startingtime" prefWidth="100.0" text="#" />
+                             <TableColumn fx:id="patientName" prefWidth="200.0" text="Patient Name" />
+                             <TableColumn fx:id="chefDoctor" prefWidth="150.0" text="Chief Doctor" />
+                             <TableColumn fx:id="DoctorsTeam" prefWidth="150.0" text="Doctors Team" />
+                             <TableColumn fx:id="OperationDate" prefWidth="100.0" text="Date" />
+                             <TableColumn fx:id="MedicalHistory" prefWidth="100.0" text="Patient Med History" />
+                             <TableColumn fx:id="Diagnostic" prefWidth="100.0" text="Diagnostic" />
+                             <TableColumn fx:id="action" prefWidth="100.0" text="Edit" />
+                         </columns>
+                         <columnResizePolicy>
+                             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                         </columnResizePolicy>
+                     </TableView>
+                     <Label layoutY="14.0" text="Weekly Operations" />
+                 </AnchorPane>
+             </HBox>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+         </VBox>
+     </ScrollPane>
+   <stylesheets>
+      <URL value="@../../../Styles/Theme1/Dashboard.css" />
+      <URL value="@../../../Styles/Theme1/FunctionButons.css" />
+      <URL value="@../../../Styles/Theme1/TableView.css" />
+      <URL value="@../../../Styles/Theme1/ListView.css" />
+   </stylesheets>
 </AnchorPane>

@@ -17,6 +17,8 @@ import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+
 import java.io.InputStream;
 import java.net.URL;
 import java.sql.*;
@@ -105,6 +107,9 @@ public class doctorsController implements Initializable{
                 dropShadow.setRadius(5);
                 dropShadow.setColor(Color.BLACK);
                 imageView.setEffect(dropShadow);
+
+                Circle clip = new Circle(15, 15, 15);
+                imageView.setClip(clip);
 
 
                 Integer queryDoctorID = queryOutput.getInt("DoctorID");
@@ -214,6 +219,8 @@ public class doctorsController implements Initializable{
             Integer Mobile = doctor.getDoctorMobile();
             String Specialization = doctor.getDoctorSpecialization();
             String Department = doctor.getDoctorDepartment();
+
+            System.out.println("Doctor's Name" + Name);
 
             //Now I call the Edit method to generate the Edit window with these infos
         } else {

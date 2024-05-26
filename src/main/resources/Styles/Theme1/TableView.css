@@ -1,0 +1,53 @@
+/* Styling the TableView */
+.table-view {
+    -fx-background-color: #f9f9f9;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: #d3d3d3;
+}
+
+/* Styling the table header */
+.table-view .column-header {
+    -fx-background-color: linear-gradient(to bottom, #f6f6f6, #eaeaea);
+    -fx-border-color: #d3d3d3;
+    -fx-border-width: 0 0 1 0;
+    -fx-alignment: CENTER-LEFT;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #f6f6f6, #eaeaea);
+}
+
+/* Styling table rows */
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+}
+
+/* Styling cells */
+.table-view .table-cell {
+    -fx-padding: 8px;
+    -fx-border-color: #d3d3d3;
+    -fx-border-width: 0 0 1 0;
+    -fx-font-size: 14px;
+}
+
+/* Styling alternating row colors */
+.table-view .table-row-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #f3f3f3;
+}
+
+/* Styling the selected row */
+.table-view .table-row-cell:focused, .table-view .table-row-cell:selected {
+    -fx-background-color: #009688;
+    -fx-text-fill: white;
+}
+
+/* Hover effect for rows */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #dddddd;
+}

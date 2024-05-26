@@ -1,0 +1,29 @@
+/* Styling the ListView */
+.list-view {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-spacing: 10px; /* Space between cells */
+}
+
+/* Styling the list cell */
+.list-cell {
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+}
+
+/* Styling the selected cell */
+.list-cell:selected {
+    -fx-background-color: #009688;
+    -fx-text-fill: white;
+}
+
+/* Hover effect for cells */
+.list-cell:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Hide the vertical scrollbar */
+.list-view .scroll-bar:vertical {
+    -fx-opacity: 0;
+}

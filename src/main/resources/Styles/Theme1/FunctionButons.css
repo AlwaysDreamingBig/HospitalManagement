@@ -1,0 +1,86 @@
+.button-add {
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: white;
+}
+
+.button-add:hover {
+    -fx-background-color: #4caf4f41; /* Green */
+    -fx-text-fill: white;
+}
+
+.button-add:pressed {
+    -fx-background-color: #2aae2e; /* Green */
+    -fx-text-fill: white;
+}
+
+.button-delete {
+    -fx-background-color: #f44336; /* Red */
+    -fx-text-fill: white;
+}
+
+.button-delete:hover {
+    -fx-background-color: #f44336bd; /* red */
+    -fx-text-fill: white;
+}
+
+.button-delete:pressed {
+    -fx-background-color: #f32011; /* red */
+    -fx-text-fill: white;
+}
+
+.button-edit {
+    -fx-background-color: #2196F3; /* Blue */
+    -fx-text-fill: white;
+}
+
+.button-edit:hover {
+    -fx-background-color: #2195f3b2; /* red */
+    -fx-text-fill: white;
+}
+
+.button-edit:pressed {
+    -fx-background-color: #048bf9; /* red */
+    -fx-text-fill: white;
+}
+
+.fontawesome-icon {
+    -fx-fill: white; /* Icon color */
+}
+
+/* Styling for Add button */
+.button-addElement {
+    -fx-background-color: #4caf4f9e; /* Green background */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-border-width: 0;
+}
+
+.button-addElement:hover {
+    -fx-background-color: #45a049; /* Darker green on hover */
+}
+
+.button-addElement:pressed {
+    -fx-background-color: #3e8e41; /* Even darker green when pressed */
+}
+
+/* Styling for Refresh button */
+.button-refresh {
+    -fx-background-color: #2195f3a1; /* Blue background */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-border-width: 0;
+}
+
+.button-refresh:hover {
+    -fx-background-color: #1e88e5; /* Darker blue on hover */
+}
+
+.button-refresh:pressed {
+    -fx-background-color: #1976d2; /* Even darker blue when pressed */
+}

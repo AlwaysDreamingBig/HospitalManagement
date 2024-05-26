@@ -5,44 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="620ccfc5-777f-438b-aa37-3c05c0b1d967" name="Changes" comment="Inventory and Ambulances management Update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/lists/doctorList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/lists/patientList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/lists/pharmacyList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/lists/staffList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/lists/staffListCell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/paymentManager/paymentManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/paymentManager/saleManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/general/reports/SalesReportGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/orderModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/salesModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/drugPicture.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Head.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/appointments/editAppointmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/utilities/ActionButonOnDbTableCell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Appointments/editAppointment.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/Appointment.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/Dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/Head.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/ListView.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/Menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/TableView.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme2/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme2/Menu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/pharmacy/HospitalManagementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/HospitalManagementApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/pharmacy/medicinesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/pharmacy/medicinesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/pharmacy/pharmacyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/pharmacy/pharmacyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/birthsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/birthsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/deathsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/deathsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/recordsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/records/recordsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/dashboard/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/dashboard/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/doctors/doctorsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/doctors/doctorsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/mainwindow/MainWindowMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/admin/mainwindow/MainWindowMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/factories/adminpagefactory/AdminPageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/factories/adminpagefactory/AdminPageFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/birthModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/birthModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/deathModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/deathModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/staffModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/models/staffModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Departments/createDepartment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Departments/createDepartment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/utilities/ActionButtonTableCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/utilities/ActionButtonTableCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/utilities/StaffActionButtonTableCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/utilities/StaffActionButtonTableCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/AdminController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/AdminController.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Appointments/addAppointment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Appointments/addAppointment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Appointments/appointmentsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Appointments/appointmentsView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Dashboard/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Dashboard/Dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Doctors/AddDoctor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Doctors/AddDoctor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Doctors/DoctorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Doctors/DoctorView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/MainWindow/MainWindowMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/MainWindow/MainWindowMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/MainWindow/MainWindowTop.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/MainWindow/MainWindowTop.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Pharmacy/medicines.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Pharmacy/medicines.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Pharmacy/pharmacy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Pharmacy/pharmacy.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/births.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/births.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/deaths.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/deaths.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/records.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/records.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/appointments.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/menu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/messageBox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/profile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/scrollpane.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/tableview.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Doctor/DoctorController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Doctor/DoctorController.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Patient/PatientController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Patient/PatientController.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/AdminForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme2/AdminForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/DoctorForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme2/DoctorForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Head.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme2/Head.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/FunctionButons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/PatientForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme2/PatientForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/add.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme2/add.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme2/edit.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,33 +69,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/aurio/IdeaProjects/HospitalManagement/src/main/resources/Ressources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/aurio/IdeaProjects/HospitalManagement/src/main/resources/Styles/Theme1",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\Styles\Theme1" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\Ressources" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\java\com\project\hospitalmanagement\controllers\admin\doctors" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\Styles" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\MainWindow" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\Appointments" />
+      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\Styles\Theme1" />
+      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\Styles\Theme2" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\java\com\project\hospitalmanagement\controllers\general\lists" />
       <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\Images" />
-      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\Departments" />
-      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\General\Rooms" />
-      <recent name="C:\Users\aurio\IdeaProjects\HospitalManagement\src\main\resources\FXML\Admin\Patients" />
     </key>
   </component>
   <component name="RunManager">

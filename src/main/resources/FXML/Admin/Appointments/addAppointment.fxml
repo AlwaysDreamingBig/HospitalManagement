@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="805.0" stylesheets="@../../../Styles/add.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="805.0" stylesheets="@../../../Styles/Theme2/add.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <ScrollPane fitToWidth="true" prefHeight="622.0" prefWidth="805.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <AnchorPane prefHeight="650.0" prefWidth="779.0" styleClass="anchor-pane">
             <Label layoutX="329.0" layoutY="34.4" styleClass="label_title" text="Add a New Appointment" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="329.4" AnchorPane.topAnchor="34.4" />

@@ -1,14 +1,12 @@
 package com.project.hospitalmanagement.controllers.factories.adminpagefactory;
 
+import com.project.hospitalmanagement.controllers.admin.appointments.editAppointmentController;
 import com.project.hospitalmanagement.controllers.admin.mainwindow.MainWindowController;
 import com.project.hospitalmanagement.controllers.admin.staff.Buttons.onActionCertificationController;
 import com.project.hospitalmanagement.controllers.admin.staff.Buttons.onActionDepartmentController;
 import com.project.hospitalmanagement.controllers.admin.staff.Buttons.onActionRequestController;
 import com.project.hospitalmanagement.controllers.admin.staff.Buttons.onActionTrainingController;
-import com.project.hospitalmanagement.controllers.models.certificationModel;
-import com.project.hospitalmanagement.controllers.models.departmentModel;
-import com.project.hospitalmanagement.controllers.models.requestModel;
-import com.project.hospitalmanagement.controllers.models.trainingModel;
+import com.project.hospitalmanagement.controllers.models.*;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
@@ -445,6 +443,23 @@ public class AdminPageFactory {
 
             controller.setFields(certificateModel);
             controller.setUpdater(Updater);
+
+            Parent parent = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(parent));
+            stage.initStyle(StageStyle.UTILITY);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showEditAppointmentWindow(appointmentsModel appointment){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Admin/Appointments/editAppointment.fxml"));
+            loader.load();
+
+            editAppointmentController controller = loader.getController();
 
             Parent parent = loader.getRoot();
             Stage stage = new Stage();

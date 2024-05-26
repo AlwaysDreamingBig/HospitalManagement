@@ -1,0 +1,62 @@
+/* File: styles.css */
+
+/* Style for the AnchorPane */
+.anchor-pane_main {
+    -fx-background-color: #ffffff; /* Light grey background */
+    -fx-border-color: #c5cace; /* Light grey border */
+    -fx-border-width: 10px; /* Border width */
+    -fx-padding: 1px; /* Padding inside the pane */
+}
+
+/* Style for the AnchorPane */
+.anchor-pane_menu {
+    -fx-background-color: #ffffff; /* Light grey background */
+    -fx-border-color: #c5cace; /* Light grey border */
+    -fx-padding: 1px; /* Padding inside the pane */
+}
+
+/* Style for any buttons inside the AnchorPane */
+.anchor-pane_menu .button {
+    -fx-background-color: #ffffff; /* Green background for buttons */
+    -fx-text-fill: black; /* White text for buttons */
+    -fx-font-weight: bold; /* Make label text bold */
+    -fx-alignment: center; /* Center the text inside the button */
+    -fx-font-size: 14px; /* Font size for button text */
+    -fx-padding: 8px 16px; /* Padding for buttons */
+    -fx-border-radius: 4px; /* Rounded corners for buttons */
+    -fx-background-radius: 4px; /* Rounded corners for buttons */
+}
+
+/* Hover effect for buttons */
+.anchor-pane_menu .button:hover {
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-background-color: #f0eded; /* Light grey background on hover */
+    -fx-text-fill: #1475f3; /* Dark grey text color for labels */
+    -fx-font-size: 18px; /* Font size for button text */
+}
+
+/* Clicked effect for buttons */
+.anchor-pane_menu .button:pressed {
+    -fx-background-color: #5495ea; /* Darker grey background when pressed */
+    -fx-text-fill: #FFFFFF; /* Dark grey text color for labels */
+    -fx-font-size: 14px; /* Font size for button text */
+}
+
+/* Style to make scroll bars invisible */
+.scroll-pane .scroll-bar:vertical,
+.scroll-pane .scroll-bar:horizontal {
+    -fx-background-color: #FFFFFF; /* Make scroll bar background transparent */
+    -fx-border-width: 0px; /* Border width */
+    -fx-background-insets: 0; /* Remove background insets */
+    -fx-padding: 0; /* Remove padding */
+}
+
+.scroll-pane .increment-button,
+.scroll-pane .decrement-button,
+.scroll-pane .thumb,
+.scroll-pane .track {
+    -fx-background-color: transparent; /* Make increment/decrement buttons, thumb, and track transparent */
+    -fx-background-insets: 0; /* Remove background insets */
+    -fx-padding: 0; /* Remove padding */
+}
+

@@ -2,10 +2,10 @@ package com.project.hospitalmanagement.controllers.admin.dashboard;
 
 import com.project.hospitalmanagement.controllers.admin.appointments.appointmentsController;
 import com.project.hospitalmanagement.controllers.admin.doctors.doctorsController;
+import com.project.hospitalmanagement.controllers.alert.alertMessage;
 import com.project.hospitalmanagement.controllers.database.dataBase;
-import com.project.hospitalmanagement.controllers.models.appointmentsModel;
-import com.project.hospitalmanagement.controllers.models.doctorModel;
-import com.project.hospitalmanagement.controllers.models.operationModel;
+import com.project.hospitalmanagement.controllers.models.*;
+import com.project.hospitalmanagement.controllers.utilities.ActionButonOnDbTableCell;
 import com.project.hospitalmanagement.controllers.utilities.ActionButtonTableCell;
 import com.project.hospitalmanagement.controllers.utilities.myDatabaseUtils.myDatabaseUtils;
 import javafx.collections.FXCollections;
@@ -25,6 +25,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -70,16 +71,28 @@ public class DashboardController implements Initializable {
     ObservableList<doctorModel> doctorAvailabilityModelObservableList = FXCollections.observableArrayList();
     ObservableList<operationModel> operationsModelObservableList = FXCollections.observableArrayList();
 
-
+    private final alertMessage alert = new alertMessage();
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+
         refreshStaffInfo();
 
         displayAttendanceChartInAnchorPane(attendanceChart);
 
+        refreshOrders();
+
+        refreshAppointments();
+
+        refreshAvailability();
+
+
+        refreshOperations();
+    }
+
+    public void refreshOrders(){
         dataBase connection = new dataBase();
         Connection connectDB = connection.connectDB();
 
@@ -110,7 +123,12 @@ public class DashboardController implements Initializable {
             System.err.println("Error executing query");
             e.printStackTrace();
         }
+    }
 
+    public void refreshAppointments(){
+
+        dataBase connection = new dataBase();
+        Connection connectDB = connection.connectDB();
         //Populate appointments tableView
         String appointmentsViewQuery = "SELECT `ID`, `PatientName`, `Doctor`, `Date`, `Time`, `Injury` FROM `appointments`";
 
@@ -142,7 +160,7 @@ public class DashboardController implements Initializable {
             Doctor.setCellValueFactory(new PropertyValueFactory<>("Doctor"));
             Injury.setCellValueFactory(new PropertyValueFactory<>("Injury"));
 
-            Action.setCellFactory(param -> new ActionButtonTableCell<>());
+            Action.setCellFactory(param -> new ActionButonOnDbTableCell<>(this::DeleteAppointmentDetails, this::EditAppointmentDetails));
 
 
             dailyAppointment.setItems(appointmentsModelObservableList);
@@ -151,7 +169,20 @@ public class DashboardController implements Initializable {
         }catch (SQLException e){
             Logger.getLogger(appointmentsController.class.getName()).log(Level.SEVERE, null, e);
             e.printStackTrace();
+        }finally {
+            try {
+                // Close the database connection
+                connectDB.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
+    }
+
+    public void refreshAvailability(){
+
+        dataBase connection = new dataBase();
+        Connection connectDB = connection.connectDB();
 
         //Populate Availability tableView
         String doctorsViewQuery = "SELECT `DoctorName`, `DoctorAvailability`, `DoctorPicture` FROM `doctors`";
@@ -186,6 +217,9 @@ public class DashboardController implements Initializable {
                 imageView.setFitWidth(30);
                 imageView.setFitHeight(30);
 
+                Circle clip = new Circle(15, 15, 15);
+                imageView.setClip(clip);
+
                 // Create a DropShadow effect
                 DropShadow dropShadow = new DropShadow();
                 dropShadow.setRadius(5);
@@ -213,9 +247,20 @@ public class DashboardController implements Initializable {
         } catch (SQLException e) {
             Logger.getLogger(doctorsController.class.getName()).log(Level.SEVERE, null, e);
             e.printStackTrace();
+        }finally {
+            try {
+                // Close the database connection
+                connectDB.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
+    }
 
+    public void refreshOperations() {
 
+        dataBase connection = new dataBase();
+        Connection connectDB = connection.connectDB();
         //Populate weekly operation tableView
         String operationsViewQuery = "SELECT `OperationID`, `OperationPatient`, `OperationChiefDoctor`, `OperationDoctorTeam`, `OperationDate`, `OperationTime`, `OperationPreviousDiagnostic` FROM `operations`";
 
@@ -265,7 +310,6 @@ public class DashboardController implements Initializable {
                 e.printStackTrace();
             }
         }
-
     }
 
     public void refreshStaffInfo(){
@@ -334,6 +378,72 @@ public class DashboardController implements Initializable {
 
         // Add the bar chart to the AnchorPane
         zizi.getChildren().add(barChart);
+    }
+
+    private void EditAppointmentDetails(appointmentsModel appointment) {
+        if (appointment != null) {
+            // get the different rows value
+            Integer ID = appointment.getID();
+            String Name = appointment.getPatientName();
+            String Email = appointment.getEmail();
+            Date Date = appointment.getDate();
+            String Doctor = appointment.getDoctor();
+            Integer Mobile = appointment.getMobile();
+            String Specialization = appointment.getInjury();
+            Time Time = appointment.getTime();
+
+
+            Model.getInstance().getAdminPageFactory().showEditAppointmentWindow(appointment);
+
+
+            System.out.println("Appointment's Name ." + Name);
+        } else {
+            System.out.println("Appointment's details could not be retrieved.");
+        }
+    }
+
+    private void DeleteAppointmentDetails(appointmentsModel appointment) {
+        if (appointment != null) {
+            // get the different rows value
+            Integer ID = appointment.getID();
+
+            dataBase connection = new dataBase();
+            Connection connectDB = connection.connectDB();
+
+            // SQL query to fetch all columns of the selected certification
+            String DeleteQuery = "DELETE FROM appointments WHERE ID = ?";
+
+                try {
+                    PreparedStatement statement = connectDB.prepareStatement(DeleteQuery);
+                    statement.setInt(1, ID);
+                    int deletedQuery = statement.executeUpdate();
+
+                    // Check if a row was returned
+                    if (deletedQuery > 0) {
+
+
+                        alert.successMessage("Deleted from the table.");
+
+                        refreshAppointments();
+
+                    }else {
+                        alert.errorMessage("Nothing was Deleted from the table .");
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        // Close the database connection
+                        connectDB.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            //Now I call the Edit method to generate the Edit window with these infos
+        } else {
+            System.out.println("Appointment's details could not be retrieved.");
+        }
     }
 
 }

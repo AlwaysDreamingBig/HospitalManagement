@@ -16,6 +16,8 @@ import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+
 import java.io.InputStream;
 import java.net.URL;
 import java.sql.*;
@@ -108,6 +110,9 @@ public class patientsController implements Initializable{
                 dropShadow.setRadius(5);
                 dropShadow.setColor(Color.BLACK);
                 imageView.setEffect(dropShadow);
+
+                Circle clip = new Circle(15, 15, 15);
+                imageView.setClip(clip);
 
 
                 Integer queryPatientID = queryOutput.getInt("PatientID");

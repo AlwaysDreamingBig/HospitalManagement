@@ -3,6 +3,8 @@ package com.project.hospitalmanagement.controllers.admin.mainwindow;
 import com.project.hospitalmanagement.controllers.models.Model;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
+import javafx.scene.shape.Circle;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -23,10 +25,12 @@ public class MainWindowMenuController implements Initializable {
     public Button ambulance_btn;
     public Button inventory_btn;
     public Button homeboard_btn;
+    public ImageView profilePicture;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         addListener();
+
     }
 
     public void addListener(){
