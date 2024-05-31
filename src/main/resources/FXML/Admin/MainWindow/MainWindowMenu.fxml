@@ -27,10 +27,6 @@
             </VBox>
          </AnchorPane>
          <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="213.0" spacing="10.0" styleClass="vbox" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
-            <Button fx:id="homeboard_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="53.0" prefWidth="230.0" text="Homeboard">
-               <graphic>
-                  <FontAwesomeIconView id="icon1" glyphName="HOME" size="20" />
-               </graphic></Button>
             <Button fx:id="EXtend_dashboard_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="53.0" prefWidth="230.0" text="Dashboard">
                <graphic>
                   <FontAwesomeIconView id="icon1" glyphName="HOME" size="20" />
@@ -58,10 +54,6 @@
             <Button fx:id="department_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="54.0" prefWidth="230.0" text="Departments">
                <graphic>
                   <FontAwesomeIconView id="icon1" size="20" />
-               </graphic></Button>
-            <Button fx:id="finance_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="54.0" prefWidth="230.0" text="Finance Management">
-               <graphic>
-                  <FontAwesomeIconView id="icon1" glyphName="MONEY" size="20" />
                </graphic></Button>
             <Button fx:id="pharmacy_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="54.0" prefWidth="230.0" text="Pharmacy">
                <graphic>

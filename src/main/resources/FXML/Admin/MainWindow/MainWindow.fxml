@@ -10,7 +10,7 @@
     </left>
 
     <center>
-        <fx:include source="../Dashboard/Homeboard.fxml"/>
+        <fx:include source="../Dashboard/Dashboard.fxml"/>
     </center>
 
     <top>

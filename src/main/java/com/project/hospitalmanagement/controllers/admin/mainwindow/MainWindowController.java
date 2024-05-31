@@ -16,7 +16,7 @@ public class MainWindowController implements Initializable {
         Model.getInstance().getAdminPageFactory().getAdminSelectedMenuItem().addListener((observableValue, oldVal, newVal) -> {
             switch (newVal){
                 case "Dashboard" -> admin_Window.setCenter(Model.getInstance().getAdminPageFactory().getDashboard());
-                case "Homeboard" -> admin_Window.setCenter(Model.getInstance().getAdminPageFactory().getHomeBoard());
+                //case "Homeboard" -> admin_Window.setCenter(Model.getInstance().getAdminPageFactory().getHomeBoard());
                 case "Appointments" -> admin_Window.setCenter(Model.getInstance().getAdminPageFactory().getAppointments());
                 case "Doctors" -> admin_Window.setCenter(Model.getInstance().getAdminPageFactory().getDoctors());
                 case "Staff Management" -> admin_Window.setCenter(Model.getInstance().getAdminPageFactory().getStaffManagement());
@@ -28,9 +28,9 @@ public class MainWindowController implements Initializable {
                 case "Records" -> admin_Window.setCenter(Model.getInstance().getAdminPageFactory().getRecords());
                 case "Ambulances" -> admin_Window.setCenter(Model.getInstance().getAdminPageFactory().getAmbulances());
                 case "Inventory" -> admin_Window.setCenter(Model.getInstance().getAdminPageFactory().getInventory());
-                case "My profile" -> admin_Window.setCenter(Model.getInstance().getAdminPageFactory().getProfile());
+                //case "My profile" -> admin_Window.setCenter(Model.getInstance().getAdminPageFactory().getProfile());
 
-                default -> admin_Window.setCenter(Model.getInstance().getAdminPageFactory().getHomeBoard());
+                default -> admin_Window.setCenter(Model.getInstance().getAdminPageFactory().getDashboard());
             }
         });
     }

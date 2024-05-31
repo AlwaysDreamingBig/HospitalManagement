@@ -35,14 +35,13 @@ public class MainWindowMenuController implements Initializable {
 
     public void addListener(){
         EXtend_dashboard_btn.setOnAction(event -> onDashboard());
-        homeboard_btn.setOnAction(event -> onHomeboard());
         appointment_btn.setOnAction(event -> onAppointments());
         staffManagement_btn.setOnAction(event -> onStaffManagement());
         doctors_btn.setOnAction(event -> onDoctors());
         patients_btn.setOnAction(event -> onPatients());
         room_btn.setOnAction(event -> onRooms());
         department_btn.setOnAction(event -> onDepartments());
-        finance_btn.setOnAction(event -> onFinances());
+        //finance_btn.setOnAction(event -> onFinances());
         pharmacy_btn.setOnAction(event -> onPharmacy());
         records_btn.setOnAction(event -> onRecords());
         ambulance_btn.setOnAction(event -> onAmbulances());
