@@ -1,0 +1,75 @@
+/* Styling for the AnchorPane menu */
+.anchor-pane_SecondWindow {
+    -fx-background-color: rgb(73, 225, 118); /* Background color */
+}
+
+
+
+.anchor-pane_stat {
+    -fx-background-color: rgba(11, 26, 247, 0.048); /* Bright green background */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0, 5); /* Drop shadow effect */
+    -fx-padding: 10px; /* Optional padding inside the anchor pane */
+}
+
+.anchor-pane_actions .label{
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+
+}
+
+.info_label{
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+    -fx-font-size: 14px; /* Adjust font size as needed */
+    -fx-text-fill: rgb(73, 225, 118); /* Blue text color on hover */
+        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0.5, 0, 2); /* Drop shadow effect */
+}
+
+/* Style for ListView */
+.list-view {
+    -fx-background-color: #00FF00; /* Bright green background */
+    -fx-control-inner-background: #FFFFFF; /* White background for list items */
+    -fx-border-color: #000000; /* Black border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-padding: 10px; /* Padding inside the list view */
+}
+
+.list-cell {
+    -fx-background-color: #FFFFFF; /* White background for each cell */
+    -fx-text-fill: #000000; /* Black text color */
+    -fx-font-weight: bold;
+    -fx-border-color: #00FF00; /* Green border to blend with screen */
+    -fx-border-width: 1px; /* Border width for cells */
+    -fx-padding: 5px; /* Padding inside each cell */
+}
+
+.list-cell:filled:selected, .list-cell:filled:hover {
+    -fx-background-color: #00FF00; /* Change cell background to green when selected or hovered */
+    -fx-text-fill: #FFFFFF; /* White text when selected or hovered */
+}
+
+/* Style for Title Label */
+.title-label {
+    -fx-font-size: 24px; /* Larger font size for titles */
+    -fx-font-weight: bold; /* Bold font weight */
+    -fx-text-fill: #FFFFFF; /* White text color */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0.5, 0, 2); /* Drop shadow effect */
+}
+
+/* Style for Number Label */
+.number-label {
+    -fx-font-size: 20px; /* Medium font size for numbers */
+    -fx-text-fill: #FFFF00; /* Yellow text color */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0.5, 0, 2); /* Drop shadow effect */
+}
+
+/* Style for Normal Label */
+.normal-label {
+    -fx-font-size: 16px; /* Normal font size */
+    -fx-text-fill: #FFFFFF; /* White text color */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0.5, 0, 2); /* Drop shadow effect */
+}
+
+
+
+

@@ -4,23 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="620ccfc5-777f-438b-aa37-3c05c0b1d967" name="Changes" comment="Styling">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/Filter.css" afterDir="false" />
+    <list default="true" id="620ccfc5-777f-438b-aa37-3c05c0b1d967" name="Changes" comment="Styling next">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/Pharmacy.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/utilities/utilitiesFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/hospitalmanagement/controllers/utilities/utilitiesFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Ambulances/ambulance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Ambulances/ambulance.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Departments/departmentView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Departments/departmentView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Doctors/DoctorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Doctors/DoctorView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Patients/PatientsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Patients/PatientsView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/AdminStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Admin/Staff/AdminStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/births.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/births.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/deaths.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/deaths.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/records.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Records/records.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Rooms/rooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Rooms/rooms.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/inventory/inventory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/inventory/inventory.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/Appointment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/Appointment.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/Dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/FunctionButons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Theme1/FunctionButons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Pharmacy/medicines.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Pharmacy/medicines.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/General/Pharmacy/pharmacy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/General/Pharmacy/pharmacy.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716706654992</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Styling next">
+      <option name="closed" value="true" />
+      <created>1717149039779</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717149039779</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -156,7 +152,8 @@
     <MESSAGE value="Room management Update" />
     <MESSAGE value="Inventory and Ambulances management Update" />
     <MESSAGE value="Styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Styling" />
+    <MESSAGE value="Styling next" />
+    <option name="LAST_COMMIT_MESSAGE" value="Styling next" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
