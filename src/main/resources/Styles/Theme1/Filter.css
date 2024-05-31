@@ -1,0 +1,53 @@
+.anchor-pane_mainFilter {
+    -fx-background-color: white;
+    -fx-background-radius: 10px; /* Adjust the radius as needed */
+}
+
+/* Styling the labels within a VBox */
+.anchor-pane_mainFilter .label {
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+}
+
+/* Basic styling for CheckBox */
+.check-box {
+    -fx-padding: 5px;
+    -fx-font-family: "Arial"; /* Change to your desired font */
+    -fx-font-size: 12px; /* Adjust font size as needed */
+}
+
+/* Styling for the box part of the CheckBox */
+.check-box .box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 2px;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-pref-width: 16px; /* Size of the checkbox */
+    -fx-pref-height: 16px; /* Size of the checkbox */
+}
+
+/* Styling for the mark inside the CheckBox when selected */
+.check-box:selected .box {
+    -fx-background-color: #2196F3; /* Blue background for selected state */
+    -fx-border-color: #2196F3;
+}
+
+.check-box:selected .box .mark {
+    -fx-background-color: white; /* White check mark */
+}
+
+/* Hover effect for CheckBox */
+.check-box:hover .box {
+    -fx-border-color: #999999;
+}
+
+/* Disabled state styling */
+.check-box:disabled .box {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #dddddd;
+}
+
+.check-box:disabled .text {
+    -fx-opacity: 0.5;
+}

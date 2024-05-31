@@ -3,6 +3,8 @@
 <!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>-->
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
@@ -14,10 +16,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="690.0" minWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.rooms.roomsController">
+<AnchorPane minHeight="690.0" minWidth="1200.0" styleClass="anchor-pane_mainWindow" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.rooms.roomsController">
     <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="56.0" prefHeight="644.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.0">
-        <AnchorPane prefHeight="700.0" prefWidth="1060.0">
-            <TextField fx:id="search_bar" layoutX="15.0" layoutY="35.0" prefHeight="26.0" prefWidth="941.0" AnchorPane.rightAnchor="241.80000000000007" />
+        <AnchorPane prefHeight="700.0" prefWidth="1060.0" styleClass="anchor-pane_mainWindow">
+            <TextField fx:id="search_bar" layoutX="189.0" layoutY="18.0" prefHeight="33.0" prefWidth="595.0" AnchorPane.leftAnchor="188.80000000000007" AnchorPane.rightAnchor="414.20000000000005" />
          <TableView fx:id="rooms_tableView" layoutX="10.0" layoutY="10.0" prefHeight="558.0" prefWidth="943.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="75.0">
             <columns>
                <TableColumn fx:id="RoomNumber" prefWidth="100.0" text="Room Number" />
@@ -33,17 +35,21 @@
                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
          </TableView>
-         <Button layoutX="905.0" layoutY="35.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" AnchorPane.rightAnchor="239.00000000000009" />
-         <FontAwesomeIconView glyphName="SEARCH" layoutX="923.0" layoutY="56.0" size="20" AnchorPane.rightAnchor="256.8285717010499" />
-         <Button fx:id="showAll" layoutX="985.0" layoutY="75.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="194.0" text="Show All" AnchorPane.rightAnchor="19.0" />
-            <VBox alignment="CENTER" layoutX="953.0" layoutY="109.0" prefHeight="530.0" prefWidth="198.0" spacing="10.0" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="109.0">
-                <Label text="Filter by Room Type" />
+         <Button fx:id="showAll" layoutX="985.0" layoutY="75.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="194.0" styleClass="button-edit" text="Show All" AnchorPane.rightAnchor="19.0" />
+            <VBox alignment="CENTER" layoutX="953.0" layoutY="109.0" prefHeight="530.0" prefWidth="198.0" spacing="10.0" styleClass="anchor-pane_mainFilter" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="109.0">
+                <Label text="Filter by Room Type">
+               <font>
+                  <Font name="Times New Roman Bold" size="12.0" />
+               </font></Label>
                 <VBox prefHeight="82.0" prefWidth="194.0" spacing="20.0">
                     <CheckBox fx:id="standardCheckbox" mnemonicParsing="false" text="Standard" />
                     <CheckBox fx:id="suiteCheckbox" mnemonicParsing="false" text="Suite" />
                     <CheckBox fx:id="deluxeCheckbox" mnemonicParsing="false" text="Deluxe" />
                 </VBox>
-                <Label text="Filter by Gender" />
+                <Label text="Filter by Gender">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
                 <VBox prefHeight="65.0" prefWidth="194.0" spacing="20.0">
                     <CheckBox fx:id="maleCheckbox" mnemonicParsing="false" text="Male" />
                     <CheckBox fx:id="femaleCheckbox" mnemonicParsing="false" text="Female" />
@@ -60,9 +66,12 @@
                     <CheckBox fx:id="julySeptCheckbox" mnemonicParsing="false" text="July - September" />
                     <CheckBox fx:id="octDecCheckbox" mnemonicParsing="false" text="October - December" />
                 </VBox>
-                <Button fx:id="apply" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" text="Apply" />
+                <Button fx:id="apply" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" styleClass="button-refresh" text="Apply" />
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
             </VBox>
-         <Button fx:id="addAllotment" layoutX="985.0" layoutY="35.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="194.0" text="Add New Room" AnchorPane.rightAnchor="19.200000000000017">
+         <Button fx:id="addAllotment" layoutX="985.0" layoutY="35.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="194.0" styleClass="button-add" text="Add New Room" AnchorPane.rightAnchor="19.200000000000017">
             <graphic>
                <FontAwesomeIconView glyphName="PLUS" />
             </graphic>
@@ -81,4 +90,10 @@
            </font>
         </Label>
     </AnchorPane>
+   <stylesheets>
+      <URL value="@../../../Styles/Theme1/Appointment.css" />
+      <URL value="@../../../Styles/Theme1/TableView.css" />
+      <URL value="@../../../Styles/Theme1/FunctionButons.css" />
+      <URL value="@../../../Styles/Theme1/Filter.css" />
+   </stylesheets>
 </AnchorPane>

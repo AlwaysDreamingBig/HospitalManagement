@@ -39,6 +39,9 @@
     -fx-border-color: #dddddd;
 }
 
+.shadow{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 255, 0.55), 5, 0.5, 0, 0);
+}
 
 
 

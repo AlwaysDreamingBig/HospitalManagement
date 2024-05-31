@@ -56,6 +56,8 @@
     -fx-border-radius: 3px;
     -fx-background-radius: 3px;
     -fx-border-width: 0;
+        -fx-font-weight: bold;
+
 }
 
 .button-addElement:hover {
@@ -75,6 +77,8 @@
     -fx-border-radius: 3px;
     -fx-background-radius: 3px;
     -fx-border-width: 0;
+        -fx-font-weight: bold;
+
 }
 
 .button-refresh:hover {
@@ -83,4 +87,26 @@
 
 .button-refresh:pressed {
     -fx-background-color: #1976d2; /* Even darker blue when pressed */
+}
+
+
+/* Styling for OTHER button */
+.button-other {
+    -fx-background-color: #f0f321e4; /* Blue background */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-border-width: 0;
+        -fx-font-weight: bold;
+
+}
+
+.button-other:hover {
+    -fx-background-color: #f0f321; /* Darker blue on hover */
+}
+
+.button-other:pressed {
+    -fx-background-color: #f0f406; /* Even darker blue when pressed */
 }

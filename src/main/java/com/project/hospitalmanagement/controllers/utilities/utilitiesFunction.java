@@ -194,7 +194,7 @@ public class utilitiesFunction {
             @Override
             public void handle(MouseEvent event) {
                 // Create a ScaleTransition
-                ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(100), node);
+                ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(200), node);
                 scaleTransition.setToX(0.9);
                 scaleTransition.setToY(0.9);
                 scaleTransition.play();
@@ -205,7 +205,7 @@ public class utilitiesFunction {
             @Override
             public void handle(MouseEvent event) {
                 // Reverse the transition to give a button click effect
-                ScaleTransition reverseTransition = new ScaleTransition(Duration.millis(100), node);
+                ScaleTransition reverseTransition = new ScaleTransition(Duration.millis(200), node);
                 reverseTransition.setToX(1);
                 reverseTransition.setToY(1);
                 reverseTransition.play();
@@ -216,7 +216,7 @@ public class utilitiesFunction {
             @Override
             public void handle(MouseEvent event) {
                 // Apply hover effect when mouse enters
-                ScaleTransition hoverTransition = new ScaleTransition(Duration.millis(100), node);
+                ScaleTransition hoverTransition = new ScaleTransition(Duration.millis(200), node);
                 hoverTransition.setToX(1.1);
                 hoverTransition.setToY(1.1);
                 hoverTransition.play();
@@ -227,7 +227,7 @@ public class utilitiesFunction {
             @Override
             public void handle(MouseEvent event) {
                 // Reverse hover effect when mouse exits
-                ScaleTransition reverseHoverTransition = new ScaleTransition(Duration.millis(100), node);
+                ScaleTransition reverseHoverTransition = new ScaleTransition(Duration.millis(200), node);
                 reverseHoverTransition.setToX(1);
                 reverseHoverTransition.setToY(1);
                 reverseHoverTransition.play();

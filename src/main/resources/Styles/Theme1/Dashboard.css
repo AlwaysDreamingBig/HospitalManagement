@@ -16,7 +16,7 @@
 .anchor-pane_infos {
     -fx-background-color: white;
     -fx-background-radius: 10px; /* Adjust the radius as needed */
-Dashboard.css}
+}
 
 .anchor-pane_doctors {
     -fx-background-color: rgba(0, 0, 255, 0.175);

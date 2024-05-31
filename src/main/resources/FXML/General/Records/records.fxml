@@ -2,6 +2,7 @@
 
 <!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>-->
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -9,19 +10,32 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.records.recordsController">
     <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <AnchorPane prefHeight="700.0" prefWidth="1060.0">
+        <AnchorPane prefHeight="700.0" prefWidth="1060.0" styleClass="anchor-pane_mainWindow">
             <AnchorPane layoutX="44.0" layoutY="14.0" prefHeight="90.0" prefWidth="490.0" AnchorPane.leftAnchor="44.0">
-                <Label layoutX="24.0" layoutY="37.0" text="Number of births:" />
-                <Label fx:id="BirthsNumber" layoutX="179.0" layoutY="37.0" text="Label" />
-                <Button fx:id="BirthList" layoutX="278.0" layoutY="33.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Check Details" />
+                <Label layoutX="94.0" layoutY="31.0" text="Number of births:">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+                <Label fx:id="BirthsNumber" layoutX="276.0" layoutY="33.0" text="10">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font></Label>
+                <Button fx:id="BirthList" layoutX="325.0" layoutY="27.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="151.0" styleClass="button-addElement" text="Check Details" AnchorPane.rightAnchor="15.0" />
             </AnchorPane>
             <AnchorPane layoutX="647.0" layoutY="14.0" prefHeight="90.0" prefWidth="490.0">
-                <Label layoutX="24.0" layoutY="37.0" text="Number of deaths:" />
-                <Label fx:id="DeathsNumber" layoutX="179.0" layoutY="37.0" text="Label" />
-                <Button fx:id="DeathList" layoutX="278.0" layoutY="33.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Check Details" />
+                <Label layoutX="94.0" layoutY="38.0" text="Number of deaths:">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></Label>
+                <Label fx:id="DeathsNumber" layoutX="259.0" layoutY="38.0" text="10">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font></Label>
+                <Button fx:id="DeathList" layoutX="324.0" layoutY="27.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="151.0" styleClass="button-addElement" text="Check Details" AnchorPane.rightAnchor="15.199999999999989" />
             </AnchorPane>
             <HBox layoutX="24.0" layoutY="110.0" prefHeight="446.0" prefWidth="1178.0" spacing="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
                 <TableView fx:id="Birth_tableView" prefHeight="446.0" prefWidth="451.0" HBox.hgrow="ALWAYS">
@@ -47,7 +61,13 @@
                     </columnResizePolicy>
                 </TableView>
             </HBox>
-         <AnchorPane fx:id="graphPane" layoutX="228.0" layoutY="586.0" prefHeight="500.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="586.0" />
+         <AnchorPane fx:id="graphPane" layoutX="228.0" layoutY="586.0" prefHeight="500.0" prefWidth="200.0" styleClass="anchor-pane_infos" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="586.0" />
         </AnchorPane>
     </ScrollPane>
+   <stylesheets>
+      <URL value="@../../../Styles/Theme1/Appointment.css" />
+      <URL value="@../../../Styles/Theme1/TableView.css" />
+      <URL value="@../../../Styles/Theme1/FunctionButons.css" />
+      <URL value="@../../../Styles/Theme1/Dashboard.css" />
+   </stylesheets>
 </AnchorPane>

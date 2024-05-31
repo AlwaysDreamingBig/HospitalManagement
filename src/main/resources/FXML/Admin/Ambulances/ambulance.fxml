@@ -3,6 +3,7 @@
 <!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>-->
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -11,14 +12,18 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.ambulances.ambulancesController">
     <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <AnchorPane prefHeight="700.0" prefWidth="1060.0">
-            <Label layoutX="15.0" layoutY="2.0" text="Ambulances --&gt; Ambulances List" AnchorPane.leftAnchor="15.0" />
-         <TableView fx:id="ambulance_tableView" layoutX="10.0" layoutY="10.0" prefHeight="320.0" prefWidth="1007.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="75.0">
+        <AnchorPane prefHeight="700.0" prefWidth="1060.0" styleClass="anchor-pane_mainWindow">
+            <Label layoutX="513.0" layoutY="14.0" text="Ambulances List" AnchorPane.leftAnchor="513.0">
+            <font>
+               <Font name="Times New Roman Bold" size="24.0" />
+            </font></Label>
+         <TableView fx:id="ambulance_tableView" layoutX="10.0" layoutY="108.0" prefHeight="580.0" prefWidth="1168.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="108.0">
             <columns>
-               <TableColumn fx:id="AmbulanceID" prefWidth="75.0" text="#" />
+               <TableColumn fx:id="AmbulanceID" prefWidth="75.0" text="#" visible="false" />
                <TableColumn fx:id="AmbulanceNumber" prefWidth="100.0" text="Vehicle Nbr" />
                <TableColumn fx:id="AmbulanceManufacturer" prefWidth="100.0" text="Manufacturer" />
                <TableColumn fx:id="AmbulanceDesignation" prefWidth="96.0" text="Vehicle Designation" />
@@ -33,16 +38,27 @@
                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
          </TableView>
-            <TextField fx:id="search_bar" layoutX="15.0" layoutY="35.0" prefHeight="26.0" prefWidth="714.0" />
-            <HBox layoutX="897.0" layoutY="28.0" prefHeight="40.0" prefWidth="286.0" spacing="20.0" AnchorPane.rightAnchor="15.0">
-                <Button fx:id="registerAmbulance" mnemonicParsing="false" prefHeight="23.0" prefWidth="147.0" text="Register Ambulance">
-               <graphic>
-                  <FontAwesomeIconView />
-               </graphic></Button>
-                <Button fx:id="refreshAmbulance" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Refresh" />
+         <TextField fx:id="search_bar" layoutX="17.0" layoutY="60.0" prefHeight="34.0" prefWidth="322.0" styleClass="search-bar" />
+            <HBox layoutX="863.0" layoutY="59.0" prefHeight="38.0" prefWidth="324.0" spacing="20.0">
+                <Button fx:id="registerAmbulance" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0"
+                        styleClass="button-addElement" text="Register ">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="PLUS" size="20"/>
+                    </graphic>
+                </Button>
+                <Button fx:id="refreshAmbulance" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0"
+                        styleClass="button-refresh" text="Refesh">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="REFRESH" size="20"/>
+                    </graphic>
+                </Button>
             </HBox>
-         <Button layoutX="678.0" layoutY="35.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" />
-         <FontAwesomeIconView glyphName="SEARCH" layoutX="696.0" layoutY="55.0" size="20" />
+         <FontAwesomeIconView glyphName="SEARCH" layoutX="306.0" layoutY="87.0" size="25" />
         </AnchorPane>
     </ScrollPane>
+   <stylesheets>
+      <URL value="@../../../Styles/Theme1/Appointment.css" />
+      <URL value="@../../../Styles/Theme1/TableView.css" />
+      <URL value="@../../../Styles/Theme1/FunctionButons.css" />
+   </stylesheets>
 </AnchorPane>

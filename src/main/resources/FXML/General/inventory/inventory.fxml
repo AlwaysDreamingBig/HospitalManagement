@@ -3,6 +3,8 @@
 <!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>-->
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
@@ -14,14 +16,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane minHeight="700.0" minWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.admin.inventory.inventoryController">
     <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <AnchorPane prefHeight="700.0" prefWidth="1060.0">
+        <AnchorPane prefHeight="700.0" prefWidth="1060.0" styleClass="anchor-pane_mainWindow">
             <TextField fx:id="search_bar" layoutX="15.0" layoutY="35.0" prefHeight="26.0" prefWidth="666.0" />
             <AnchorPane layoutX="150.0" layoutY="86.4" prefHeight="602.0" prefWidth="1178.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="86.0">
                 <HBox alignment="CENTER" layoutX="237.0" layoutY="-24.0" prefHeight="50.0" prefWidth="1157.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <Label text="Inventory List" />
+                    <Label text="Inventory List">
+                  <font>
+                     <Font name="Times New Roman Bold" size="24.0" />
+                  </font></Label>
                 </HBox>
                 <TableView fx:id="inventory_tableView" layoutX="20.0" layoutY="51.2" prefHeight="550.0" prefWidth="954.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="224.0" AnchorPane.topAnchor="51.0">
                     <columns>
@@ -39,7 +45,7 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
                 </TableView>
-                <VBox alignment="CENTER" layoutX="973.0" layoutY="91.0" prefHeight="350.0" prefWidth="198.0" spacing="10.0" AnchorPane.rightAnchor="10.0">
+                <VBox alignment="CENTER" layoutX="973.0" layoutY="91.0" prefHeight="350.0" prefWidth="198.0" spacing="10.0" styleClass="anchor-pane_mainFilter" AnchorPane.rightAnchor="10.0">
                     <Label text="Filter by Stock" />
                     <VBox prefHeight="82.0" prefWidth="194.0" spacing="20.0">
                         <CheckBox fx:id="emptyCheckbox" mnemonicParsing="false" text="Empty" />
@@ -52,21 +58,31 @@
                         <CheckBox fx:id="brokenCheckbox" mnemonicParsing="false" text="Broken" />
                         <CheckBox fx:id="orderedCheckbox" mnemonicParsing="false" text="Ordered" />
                     </VBox>
-                    <Button fx:id="apply" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" text="Apply" />
+                    <Button fx:id="apply" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" styleClass="button-edit" text="Apply" />
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
                 </VBox>
-            <Button fx:id="showAll" layoutX="974.0" layoutY="51.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="187.0" text="Show All" AnchorPane.rightAnchor="16.399999999999864" />
-                <VBox alignment="CENTER" layoutX="1018.0" layoutY="429.0" prefHeight="159.0" prefWidth="198.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="442.40000000000003">
+            <Button fx:id="showAll" layoutX="974.0" layoutY="51.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="187.0" styleClass="button-edit" text="Show All" AnchorPane.rightAnchor="16.399999999999864" />
+                <VBox alignment="CENTER" layoutX="968.0" layoutY="461.0" prefHeight="141.0" prefWidth="198.0" spacing="5.0" AnchorPane.bottomAnchor="-0.19999999999993107" AnchorPane.rightAnchor="11.199999999999818" AnchorPane.topAnchor="461.0">
                     <Label text="Last orders" />
-                    <ListView fx:id="ordersList" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                    <ListView fx:id="ordersList" prefHeight="108.0" prefWidth="198.0" VBox.vgrow="ALWAYS" />
                 </VBox>
             </AnchorPane>
             <HBox layoutX="778.0" layoutY="33.0" prefHeight="30.0" prefWidth="460.0" spacing="20.0" AnchorPane.rightAnchor="30.0">
-                <Button fx:id="addItem" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" text="Add Inventory Item" />
-                <Button fx:id="refresh" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" text="Refresh" />
-                <Button fx:id="newOrder" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" text="Make an Order" />
+                <Button fx:id="addItem" mnemonicParsing="false" prefHeight="36.0" prefWidth="165.0" styleClass="button-addElement" text="Add Inventory Item" />
+                <Button fx:id="refresh" mnemonicParsing="false" prefHeight="21.0" prefWidth="140.0" styleClass="button-refresh" text="Refresh" />
+                <Button fx:id="newOrder" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" styleClass="button-other" text="Make an Order" />
             </HBox>
-         <Button layoutX="630.0" layoutY="36.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" />
-         <FontAwesomeIconView glyphName="SEARCH" layoutX="646.0" layoutY="56.0" size="20" />
+         <Button layoutX="630.0" layoutY="36.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" />
+         <FontAwesomeIconView glyphName="SEARCH" layoutX="646.0" layoutY="59.0" size="20" />
         </AnchorPane>
     </ScrollPane>
+   <stylesheets>
+      <URL value="@../../../Styles/Theme1/Appointment.css" />
+      <URL value="@../../../Styles/Theme1/FunctionButons.css" />
+      <URL value="@../../../Styles/Theme1/Filter.css" />
+      <URL value="@../../../Styles/Theme1/FunctionButons.css" />
+      <URL value="@../../../Styles/Theme1/TableView.css" />
+   </stylesheets>
 </AnchorPane>
