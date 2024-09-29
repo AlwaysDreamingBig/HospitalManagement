@@ -3,6 +3,7 @@ package com.project.hospitalmanagement.controllers.factories;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
 
 public class PageFactory {
     public PageFactory(){};
@@ -16,7 +17,8 @@ public class PageFactory {
         }
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Title window");
+        stage.setTitle("Hospital Management System");
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/Images/login.jpg")));
         stage.show();
     }
 

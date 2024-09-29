@@ -112,25 +112,44 @@ public class ambulancesController implements Initializable{
             search_bar.textProperty().addListener((observable, oldValue, newValue) -> {
                 filteredData.setPredicate(ambulance -> {
 
-                    if (newValue.isEmpty() || newValue.isBlank() || newValue == null){
+                    if (newValue == null || newValue.isBlank()) {
                         return true;
                     }
 
                     String searchKeyword = newValue.toLowerCase();
 
+                    // Check ambulance manufacturer
+                    if (ambulance.getAmbulanceManufacturer() != null
+                            && ambulance.getAmbulanceManufacturer().toLowerCase().contains(searchKeyword)) {
+                        return true;
+                    }
 
-                    if (ambulance.getAmbulanceManufacturer().toLowerCase().indexOf(searchKeyword) > -1){
-                        return true;    //Means a match was found in Ambulance column
-                    } else if (ambulance.getAmbulanceMadeYear().toString().indexOf(searchKeyword) > -1) {
+                    // Check ambulance made year
+                    if (ambulance.getAmbulanceMadeYear() != null
+                            && ambulance.getAmbulanceMadeYear().toString().contains(searchKeyword)) {
                         return true;
-                    } else if (ambulance.getAmbulanceSeller().toLowerCase().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check ambulance seller
+                    if (ambulance.getAmbulanceSeller() != null
+                            && ambulance.getAmbulanceSeller().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (ambulance.getAmbulanceContract().toString().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check ambulance contract
+                    if (ambulance.getAmbulanceContract() != null
+                            && ambulance.getAmbulanceContract().toString().contains(searchKeyword)) {
                         return true;
-                    } else if (ambulance.getAmbulanceDriver().toString().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check ambulance driver
+                    if (ambulance.getAmbulanceDriver() != null
+                            && ambulance.getAmbulanceDriver().toString().contains(searchKeyword)) {
                         return true;
-                    } else
-                        return false;   //no match found
+                    }
+
+                    // No match found
+                    return false;
                 });
             });
 

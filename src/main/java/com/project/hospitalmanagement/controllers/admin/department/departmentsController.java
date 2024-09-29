@@ -109,21 +109,32 @@ public class departmentsController implements Initializable{
             search_bar.textProperty().addListener((observable, oldValue, newValue) -> {
                 filteredData.setPredicate(department -> {
 
-                    if (newValue.isEmpty() || newValue.isBlank() || newValue == null){
+                    if (newValue == null || newValue.isBlank()) {
                         return true;
                     }
 
                     String searchKeyword = newValue.toLowerCase();
 
+                    // Check department name
+                    if (department.getDepartmentName() != null
+                            && department.getDepartmentName().toLowerCase().contains(searchKeyword)) {
+                        return true;
+                    }
 
-                    if (department.getDepartmentName().toLowerCase().indexOf(searchKeyword) > -1){
-                        return true;    //Means a match was found in Department column
-                    } else if (department.getDepartmentHead().toLowerCase().indexOf(searchKeyword) > -1) {
+                    // Check department head
+                    if (department.getDepartmentHead() != null
+                            && department.getDepartmentHead().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (department.getDepartmentCreation().toString().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check department creation date
+                    if (department.getDepartmentCreation() != null
+                            && department.getDepartmentCreation().toString().contains(searchKeyword)) {
                         return true;
-                    } else
-                        return false;   //no match found
+                    }
+
+                    // No match found
+                    return false;
                 });
             });
 

@@ -59,7 +59,7 @@ public class doctorController implements Initializable {
         }
         else{
 
-            String checkUser = "SELECT * FROM doctor WHERE email = '" + regEmail_fld.getText() + "' OR nmid = '" + nmid_fld.getText() + "'";
+            String checkUser = "SELECT * FROM doctors WHERE DoctorEmail = '" + regEmail_fld.getText() + "' OR DoctorMNID = '" + nmid_fld.getText() + "'";
             //connect = dataBase.connectDB();
             dataBase connection = new dataBase();
             Connection connect = connection.connectDB();
@@ -73,7 +73,7 @@ public class doctorController implements Initializable {
                     alert.errorMessage("An account already exists for these informations");
                 }else{
 
-                    String insertUser = "INSERT INTO doctor (name, email, password, nmid) VALUES(?, ?, ?, ?)";
+                    String insertUser = "INSERT INTO doctors (DoctorName, DoctorEmail, DoctorPassword, DoctorMNID ) VALUES(?, ?, ?, ?)";
                     Date date = new Date();
                     java.sql.Date sqlDate = new java.sql.Date(date.getTime());
 
@@ -104,7 +104,7 @@ public class doctorController implements Initializable {
             alert.errorMessage("Well you think ya funny aah");
         }else{
 
-            String loginSQL = "SELECT * FROM doctor WHERE email = ? AND password = ? AND doctor_id = ?";
+            String loginSQL = "SELECT * FROM doctors WHERE DoctorEmail = ? AND DoctorPassword = ? AND DoctorID  = ?";
 
             //connect = dataBase.connectDB();
             dataBase connection = new dataBase();

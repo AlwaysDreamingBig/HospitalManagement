@@ -126,25 +126,44 @@ public class birthsController implements Initializable{
             search_bar.textProperty().addListener((observable, oldValue, newValue) -> {
                 filteredData.setPredicate(birth -> {
 
-                    if (newValue.isEmpty() || newValue.isBlank() || newValue == null){
+                    if (newValue == null || newValue.isBlank()) {
                         return true;
                     }
 
                     String searchKeyword = newValue.toLowerCase();
 
+                    // Check birth name
+                    if (birth.getBirthName() != null
+                            && birth.getBirthName().toLowerCase().contains(searchKeyword)) {
+                        return true;
+                    }
 
-                    if (birth.getBirthName().toLowerCase().indexOf(searchKeyword) > -1){
-                        return true;    //Means a match was found in Birth column
-                    } else if (birth.getBirthGender().toLowerCase().indexOf(searchKeyword) > -1) {
+                    // Check birth gender
+                    if (birth.getBirthGender() != null
+                            && birth.getBirthGender().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (birth.getBirthMother().toLowerCase().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check birth mother
+                    if (birth.getBirthMother() != null
+                            && birth.getBirthMother().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (birth.getBirthDate().toString().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check birth date
+                    if (birth.getBirthDate() != null
+                            && birth.getBirthDate().toString().contains(searchKeyword)) {
                         return true;
-                    } else if (birth.getBirthBloodGp().toLowerCase().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check birth blood group
+                    if (birth.getBirthBloodGp() != null
+                            && birth.getBirthBloodGp().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else
-                        return false;   //no match found
+                    }
+
+                    // No match found
+                    return false;
                 });
             });
 

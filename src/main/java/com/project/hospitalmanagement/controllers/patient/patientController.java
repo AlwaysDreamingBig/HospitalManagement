@@ -3,19 +3,23 @@ package com.project.hospitalmanagement.controllers.patient;
 import com.project.hospitalmanagement.controllers.alert.alertMessage;
 import com.project.hospitalmanagement.controllers.database.dataBase;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Date;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-import static com.project.hospitalmanagement.controllers.utilities.utilitiesFunction.isValidEmail;
-import static com.project.hospitalmanagement.controllers.utilities.utilitiesFunction.isValidPassword;
+import static com.project.hospitalmanagement.controllers.utilities.utilitiesFunction.*;
+import static com.project.hospitalmanagement.controllers.utilities.utilitiesFunction.bindCheckboxToShowPassword;
 
-public class patientController {
+public class patientController implements Initializable {
     public TextField logEmail_fld;
     public AnchorPane login_form;
     public PasswordField logPassword_fld;
@@ -56,7 +60,7 @@ public class patientController {
         }
         else{
 
-            String checkUser = "SELECT * FROM patient WHERE email = '" + regEmail_fld.getText() + "'";
+            String checkUser = "SELECT * FROM patients WHERE PatientEmail = '" + regEmail_fld.getText() + "'";
             //connect = dataBase.connectDB();
             dataBase connection = new dataBase();
             Connection connect = connection.connectDB();
@@ -70,7 +74,7 @@ public class patientController {
                     alert.errorMessage("An account already exists for this email address");
                 }else{
 
-                    String insertUser = "INSERT INTO patient (name, email, password, date) VALUES(?, ?, ?, ?)";
+                    String insertUser = "INSERT INTO patients (PatientName, PatientEmail, PatientPassword, PatientAccountDate) VALUES(?, ?, ?, ?)";
                     Date date = new Date();
                     java.sql.Date sqlDate = new java.sql.Date(date.getTime());
 
@@ -96,6 +100,51 @@ public class patientController {
         }
     }
 
+    public void loginAccount(){
+        alertMessage alert = new alertMessage();
+
+        if(logEmail_fld.getText().isEmpty() ||logPassword_fld.getText().isEmpty() ){
+            alert.errorMessage("Well just enter the email and password maybe ?");
+        }else{
+
+            String loginSQL = "SELECT * FROM patients WHERE PatientEmail = ? AND PatientPassword = ?";
+
+            //connect = dataBase.connectDB();
+            dataBase connection = new dataBase();
+            Connection connect = connection.connectDB();
+
+            try {
+                assert connect != null;
+                prepare = connect.prepareStatement(loginSQL);
+                prepare.setString(1, logEmail_fld.getText());
+                prepare.setString(2, logPassword_fld.getText());
+                result = prepare.executeQuery();
+
+                if (result.next())  {
+                    alert.successMessage("Connection successful");
+                }else {
+                    alert.errorMessage("Incorrect login password or email address or doctor ID");
+                }
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void switchForm(ActionEvent event) {
+
+        if(event.getSource() == goto_register){
+            reg_form.setVisible(true);
+            login_form.setVisible(false);
+            resetFields();
+        } else if (event.getSource() == goto_login) {
+            reg_form.setVisible(false);
+            login_form.setVisible(true);
+            resetFields();
+        }
+
+    }
+
     public void resetFields(){
         logPassword_fld.clear();
         logEmail_fld.clear();
@@ -103,5 +152,11 @@ public class patientController {
         regPassword_fld1.clear();
         regPassword_fld2.clear();
         regEmail_fld.clear();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        bindCheckboxToShowPassword(logPassword_fld, showLogPassword, viewLogssword_fld);
+        bindCheckboxToShowMultiPasswords(regPassword_fld1, viewRegPassword1, regPassword_fld2, viewRegPassword2, showRegPassword);
     }
 }

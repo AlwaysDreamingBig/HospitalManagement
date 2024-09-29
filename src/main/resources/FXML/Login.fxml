@@ -6,15 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.loginController">
+<AnchorPane prefHeight="400.0" prefWidth="700.0" stylesheets="@../Styles/Theme2/Login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.hospitalmanagement.controllers.loginController">
    <AnchorPane prefHeight="400.0" prefWidth="402.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
       <ImageView fitHeight="434.0" fitWidth="403.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <Image url="@../Images/Capture%20d'écran%202023-06-24%20193505.png" />
+         <Image url="@../Images/login.jpg" />
       </ImageView>
    </AnchorPane>
-   <Button fx:id="doctor_btn" layoutX="454.0" layoutY="223.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="208.0" text="Doctor" AnchorPane.rightAnchor="38.0" />
-   <Button fx:id="other_btn" layoutX="454.0" layoutY="333.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="208.0" text="Other" AnchorPane.rightAnchor="38.0" />
-   <Button fx:id="patient_btn" layoutX="454.0" layoutY="114.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="208.0" text="Patient" AnchorPane.rightAnchor="38.0" />
+   <Button fx:id="doctor_btn" layoutX="454.0" layoutY="349.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="208.0" styleClass="button-doctor" text="Doctor" AnchorPane.rightAnchor="38.0" />
+   <Button fx:id="other_btn" layoutX="454.0" layoutY="236.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="208.0" styleClass="button-admin" text="Other" AnchorPane.rightAnchor="38.0" />
+   <Button fx:id="patient_btn" layoutX="454.0" layoutY="114.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="208.0" styleClass="button-patient" text="Patient" AnchorPane.rightAnchor="38.0" />
    <Text layoutX="466.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome tot the WeCARE Hospital" />
    <Text layoutX="486.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please choose a login form." />
 </AnchorPane>

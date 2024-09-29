@@ -151,28 +151,42 @@ public class doctorsController implements Initializable{
 
             search_bar.textProperty().addListener((observable, oldValue, newValue) -> {
                 filteredData.setPredicate(doctor -> {
-
-                    if (newValue.isEmpty() || newValue.isBlank() || newValue == null){
+                    if (newValue == null || newValue.isBlank()) {
                         return true;
                     }
 
                     String searchKeyword = newValue.toLowerCase();
 
+                    // Check doctor name
+                    if (doctor.getDoctorName() != null && doctor.getDoctorName().toLowerCase().contains(searchKeyword)) {
+                        return true;
+                    }
 
-                    if (doctor.getDoctorName().toLowerCase().indexOf(searchKeyword) > -1){
-                        return true;    //Means a match was found in Doctor column
-                    } else if (doctor.getDoctorDepartment().toLowerCase().indexOf(searchKeyword) > -1) {
+                    // Check doctor department
+                    if (doctor.getDoctorDepartment() != null && doctor.getDoctorDepartment().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (doctor.getDoctorSpecialization().toLowerCase().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check doctor specialization
+                    if (doctor.getDoctorSpecialization() != null && doctor.getDoctorSpecialization().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (doctor.getDoctorEntryDate().toString().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check doctor entry date
+                    if (doctor.getDoctorEntryDate() != null && doctor.getDoctorEntryDate().toString().contains(searchKeyword)) {
                         return true;
-                    } else if (doctor.getDoctorEndDate().toString().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check doctor end date
+                    if (doctor.getDoctorEndDate() != null && doctor.getDoctorEndDate().toString().contains(searchKeyword)) {
                         return true;
-                    } else
-                        return false;   //no match found
+                    }
+
+                    // No match found
+                    return false;
                 });
             });
+
 
             SortedList<doctorModel> sortedData = new SortedList<>(filteredData);
 

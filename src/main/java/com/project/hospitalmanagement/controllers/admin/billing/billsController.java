@@ -84,25 +84,41 @@ public class billsController implements Initializable{
             search_bar.textProperty().addListener((observable, oldValue, newValue) -> {
                 filteredData.setPredicate(bill -> {
 
-                    if (newValue.isEmpty() || newValue.isBlank() || newValue == null){
+                    if (newValue == null || newValue.isBlank()) {
                         return true;
                     }
 
                     String searchKeyword = newValue.toLowerCase();
 
+                    // Check bill admission ID
+                    if (bill.getBillAdmissionID() != null
+                            && bill.getBillAdmissionID().toString().contains(searchKeyword)) {
+                        return true;
+                    }
 
-                    if (bill.getBillAdmissionID().toString().indexOf(searchKeyword) > -1){
-                        return true;    //Means a match was found in Bill column
-                    } else if (bill.getBillStatus().toLowerCase().indexOf(searchKeyword) > -1) {
+                    // Check bill status
+                    if (bill.getBillStatus() != null
+                            && bill.getBillStatus().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (bill.getBillPatientName().toLowerCase().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check bill patient name
+                    if (bill.getBillPatientName() != null
+                            && bill.getBillPatientName().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (bill.getBillDate().toString().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check bill date
+                    if (bill.getBillDate() != null
+                            && bill.getBillDate().toString().contains(searchKeyword)) {
                         return true;
-                    } else
-                        return false;   //no match found
+                    }
+
+                    // No match found
+                    return false;
                 });
             });
+
 
             SortedList<billModel> sortedData = new SortedList<>(filteredData);
 

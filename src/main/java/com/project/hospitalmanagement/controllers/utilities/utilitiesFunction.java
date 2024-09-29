@@ -43,6 +43,40 @@ public class utilitiesFunction {
         });
     }
 
+    public static void bindCheckboxToShowMultiPasswords(
+            PasswordField passwordField1,
+            TextField viewPassword1,
+            PasswordField passwordField2,
+            TextField viewPassword2,
+            CheckBox showPasswordCheckbox) {
+
+        showPasswordCheckbox.setOnAction(event -> {
+            if (showPasswordCheckbox.isSelected()) {
+                // For first password field
+                viewPassword1.setText(passwordField1.getText());
+                viewPassword1.setVisible(true);
+                passwordField1.setVisible(false);
+
+                // For second password field
+                viewPassword2.setText(passwordField2.getText());
+                viewPassword2.setVisible(true);
+                passwordField2.setVisible(false);
+            } else {
+                // For first password field
+                passwordField1.setText(viewPassword1.getText());
+                passwordField1.setVisible(true);
+                viewPassword1.setVisible(false);
+
+                // For second password field
+                passwordField2.setText(viewPassword2.getText());
+                passwordField2.setVisible(true);
+                viewPassword2.setVisible(false);
+            }
+        });
+    }
+
+
+
     public static boolean isValidPassword(String password) {
         // Check length
         if (password.length() < 8) {

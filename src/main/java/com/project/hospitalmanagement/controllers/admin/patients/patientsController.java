@@ -154,21 +154,32 @@ public class patientsController implements Initializable{
             search_bar.textProperty().addListener((observable, oldValue, newValue) -> {
                 filteredData.setPredicate(patient -> {
 
-                    if (newValue.isEmpty() || newValue.isBlank() || newValue == null){
+                    if (newValue == null || newValue.isBlank()) {
                         return true;
                     }
 
                     String searchKeyword = newValue.toLowerCase();
 
+                    // Check patient name
+                    if (patient.getPatientName() != null
+                            && patient.getPatientName().toLowerCase().contains(searchKeyword)) {
+                        return true;
+                    }
 
-                    if (patient.getPatientName().toLowerCase().indexOf(searchKeyword) > -1){
-                        return true;    //Means a match was found in Patient column
-                    } else if (patient.getPatientTreatment().toLowerCase().indexOf(searchKeyword) > -1) {
+                    // Check patient treatment
+                    if (patient.getPatientTreatment() != null
+                            && patient.getPatientTreatment().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (patient.getPatientAssignedDr().toLowerCase().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check patient assigned doctor
+                    if (patient.getPatientAssignedDr() != null
+                            && patient.getPatientAssignedDr().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else
-                        return false;   //no match found
+                    }
+
+                    // No match found
+                    return false;
                 });
             });
 

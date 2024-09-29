@@ -1,0 +1,54 @@
+.root {
+    -fx-background-color: #84c5f0;
+}
+
+.button-patient {
+    -fx-background-color: #42d68e; /* Green */
+    -fx-text-fill: white;
+}
+
+.button-patient:hover {
+    -fx-background-color: #4caf4f41; /* Green */
+    -fx-text-fill: white;
+}
+
+.button-patient:pressed {
+    -fx-background-color: #2aae2e; /* Green */
+    -fx-text-fill: white;
+}
+
+.button-doctor {
+    -fx-background-color: #e7e713; /* Green */
+    -fx-text-fill: white;
+}
+
+.button-doctor:hover {
+    -fx-background-color: #4caf4f41; /* Green */
+    -fx-text-fill: white;
+}
+
+.button-doctor:pressed {
+    -fx-background-color: #2aae2e; /* Green */
+    -fx-text-fill: white;
+}
+
+.button-admin {
+    -fx-background-color: #e34b4b; /* Green */
+    -fx-text-fill: white;
+}
+
+.button-admin:hover {
+    -fx-background-color: #4caf4f41; /* Green */
+    -fx-text-fill: white;
+}
+
+.button-admin:pressed {
+    -fx-background-color: #2aae2e; /* Green */
+    -fx-text-fill: white;
+}
+
+.button .text {
+    -fx-fill: #EEEEEE;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.2em;
+}

@@ -129,27 +129,48 @@ public class roomsController implements Initializable{
             search_bar.textProperty().addListener((observable, oldValue, newValue) -> {
                 filteredData.setPredicate(room -> {
 
-                    if (newValue.isEmpty() || newValue.isBlank() || newValue == null){
-                        return true;
+                    // Check if the search input is empty or blank
+                    if (newValue == null || newValue.isBlank()) {
+                        return true; // Show all rooms
                     }
 
                     String searchKeyword = newValue.toLowerCase();
 
+                    // Check room number
+                    if (room.getRoomNumber() != null
+                            && room.getRoomNumber().toString().contains(searchKeyword)) {
+                        return true; // Means a match was found in Room Number column
+                    }
 
-                    if (room.getRoomNumber().toString().indexOf(searchKeyword) > -1){
-                        return true;    //Means a match was found in Room column
-                    } else if (room.getRoomPatient().toLowerCase().indexOf(searchKeyword) > -1) {
+                    // Check room patient
+                    if (room.getRoomPatient() != null
+                            && room.getRoomPatient().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (room.getRoomType().toLowerCase().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check room type
+                    if (room.getRoomType() != null
+                            && room.getRoomType().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (room.getRoomEntry() != null && room.getRoomEntry().toString().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check room entry date
+                    if (room.getRoomEntry() != null
+                            && room.getRoomEntry().toString().contains(searchKeyword)) {
                         return true;
-                    } else if (room.getRoomDeparture() != null && room.getRoomDeparture().toString().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check room departure date
+                    if (room.getRoomDeparture() != null
+                            && room.getRoomDeparture().toString().contains(searchKeyword)) {
                         return true;
-                    }  else
-                        return false;   //no match found
+                    }
+
+                    // No match found
+                    return false;
                 });
             });
+
 
             SortedList<roomModel> sortedData = new SortedList<>(filteredData);
 

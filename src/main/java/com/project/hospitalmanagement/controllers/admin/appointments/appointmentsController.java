@@ -123,24 +123,39 @@ public class appointmentsController implements Initializable {
             search_bar.textProperty().addListener((observable, oldValue, newValue) -> {
                 filteredData.setPredicate(appointment -> {
 
-                    if (newValue.isEmpty() || newValue.isBlank() || newValue == null){
+                    if (newValue == null || newValue.isBlank()) {
                         return true;
                     }
 
                     String searchKeyword = newValue.toLowerCase();
 
-                    if (appointment.getDoctor().toLowerCase().indexOf(searchKeyword) > -1){
-                        return true;    //Means a match was found in Doctor column
-                    } else if (appointment.getPatientName().toLowerCase().indexOf(searchKeyword) > -1) {
+                    // Check doctor
+                    if (appointment.getDoctor() != null && appointment.getDoctor().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (appointment.getEmail().toLowerCase().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check patient name
+                    if (appointment.getPatientName() != null && appointment.getPatientName().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (appointment.getInjury().toLowerCase().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check email
+                    if (appointment.getEmail() != null && appointment.getEmail().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (appointment.getDate().toString().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check injury
+                    if (appointment.getInjury() != null && appointment.getInjury().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else
-                        return false;   //no match found
+                    }
+
+                    // Check date
+                    if (appointment.getDate() != null && appointment.getDate().toString().toLowerCase().contains(searchKeyword)) {
+                        return true;
+                    }
+
+                    // No match found
+                    return false;
                 });
             });
 

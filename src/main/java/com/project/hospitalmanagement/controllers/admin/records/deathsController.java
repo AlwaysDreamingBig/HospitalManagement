@@ -126,25 +126,45 @@ public class deathsController implements Initializable{
             search_bar.textProperty().addListener((observable, oldValue, newValue) -> {
                 filteredData.setPredicate(death -> {
 
-                    if (newValue.isEmpty() || newValue.isBlank() || newValue == null){
+                    // Check if the search input is empty or blank
+                    if (newValue == null || newValue.isBlank()) {
                         return true;
                     }
 
                     String searchKeyword = newValue.toLowerCase();
 
+                    // Check death name
+                    if (death.getDeathName() != null
+                            && death.getDeathName().toLowerCase().contains(searchKeyword)) {
+                        return true;    // Means a match was found in Death Name column
+                    }
 
-                    if (death.getDeathName().toLowerCase().indexOf(searchKeyword) > -1){
-                        return true;    //Means a match was found in Death column
-                    } else if (death.getDeathGender().toLowerCase().indexOf(searchKeyword) > -1) {
+                    // Check death gender
+                    if (death.getDeathGender() != null
+                            && death.getDeathGender().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (death.getDeathMother().toLowerCase().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check death mother
+                    if (death.getDeathMother() != null
+                            && death.getDeathMother().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else if (death.getDeathDate().toString().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check death date
+                    if (death.getDeathDate() != null
+                            && death.getDeathDate().toString().contains(searchKeyword)) {
                         return true;
-                    } else if (death.getDeathInWatch().toLowerCase().indexOf(searchKeyword) > -1) {
+                    }
+
+                    // Check death in watch
+                    if (death.getDeathInWatch() != null
+                            && death.getDeathInWatch().toLowerCase().contains(searchKeyword)) {
                         return true;
-                    } else
-                        return false;   //no match found
+                    }
+
+                    // No match found
+                    return false;
                 });
             });
 
